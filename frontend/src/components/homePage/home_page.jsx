@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../pics/jobyssey_logo.png'
 import '../../css/homepage.css'
-import search from '../../pics/jobsearch.jpg'
+import test1 from '../../pics/test1.png'
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -36,22 +36,33 @@ class HomePage extends React.Component {
                 </li>
             </ul>
         </nav>
+
         <section className='jobyssey-home-section'>
             <div>
-                <h1 className='jobyssey-home-title'>Jobyssey helps you presue your goal</h1>
+                <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goal</h1>
                 <span className='jobyssey-home-body'>Stay on track</span>
-                <ul className='jobyssey-home-buttons'>
+                {/* <ul className='jobyssey-home-buttons'>
                     <li>
                         <Link to='/login'>TRY FOR FREE</Link>
                     </li>
                     <li>
                         <a href="#">CONTACT US</a>
                     </li>
-                </ul>
+                </ul> */}
                 <p className='jobyssey-home-note'>Need to create an account? <Link to="/login" className='slant-home-note-link'> Get started</Link></p>
             </div>
-            <img className='jobyssey-home-img' src={search} alt='jobyssey homepage'/>
+            <img className='jobyssey-home-img' src={test1} alt='jobyssey homepage'/>
         </section>  
+        <div className='footer'>
+                <Link to='/'> <img className='footer-logo' src={logo} alt="logo" /></Link>
+            <div className='footer-content'>
+                <p>About</p>
+                <p>Privacy & Terms</p>
+                <p>Question?</p>
+                <p>Manage your account and privacy</p>
+            </div>
+
+        </div>
     </div>
     }
 };

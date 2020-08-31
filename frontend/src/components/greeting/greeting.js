@@ -15,7 +15,7 @@ class Greeting extends React.Component {
             <div>Trust The Timing Of Your Life</div>
             <div className="greeting-right-section">
                 <div className="greeting-button-wrapper-top">
-                    <button className="greeting-button">Home</button>
+                    <button className="greeting-button" Link to='/'>Home</button>
                     <button className="greeting-button">Explore</button>
                     <button className="greeting-button">My Progress</button>
                     <button className="greeting-button">Export Data</button>
