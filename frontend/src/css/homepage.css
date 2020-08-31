@@ -1,7 +1,7 @@
 
 .home-nav{
     width: 100%;
-    height: 70px;
+    height: 120px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,16 +50,23 @@ li{
 
 
 .home-nav-session-button{
-    background-color: #EB7F6B;
-    width: 170px;
-    height: 42px;
+    background-color: #AE4B3B;
+    width: 200px;
+    height: 50px;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Lato';
     font-style: bold;
     padding: 12px 16px;
     margin: 0 5px;
     border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.home-nav-session-button:hover {
+    background: lightgray;
 }
 
 /* .home-nav-other{
@@ -67,7 +74,7 @@ li{
 } */
 
 .jobyssey-home-section{
-    background-color: #243843;
+    background-color: #fdbf9e;
     height: 500px;
     width: 100vw;
     display: flex;
@@ -75,6 +82,7 @@ li{
     justify-content: space-evenly;
     align-items: center;
     padding: 50px;
+    text-align: center;
 }
 
 .jobyssey-intro > div{
@@ -84,20 +92,21 @@ li{
 
 
 .jobyssey-home-img{
-    width: 800px;
+    width: 1000px;
     height: auto;
     object-fit: cover;
     object-position: center;
-    margin: 0 100px;
+    margin: 0 0px;
 }
 
 .jobyssey-home-title{
-    font-family: 'Pangolin';
-    font-size: 64px;
+    font-family: 'Blckham Script';
+    font-size: 46px;
     font-weight: bold;
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 16px;
+    padding-bottom: 50px;
 }
 
 .jobyssey-home-body{
@@ -105,6 +114,7 @@ li{
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .jobyssey-home-note{
@@ -114,20 +124,21 @@ li{
 }
 
 .jobyssey-home-note-link{
-    color: cornflowerblue;
+    color: #485d69;
     text-decoration: underline;
 }
 
-.jobyssey-home-buttons{
+/* .jobyssey-home-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 200px;
 }
 
 .jobyssey-home-buttons > li{
     box-sizing: border-box;
-    width: 200px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     border-radius: 4px;
     border: 1px solid black;
     padding: 20px 40px;
@@ -136,4 +147,23 @@ li{
     font-family: 'Lato';
     font-size: 14px;
     text-align: center;
+} */
+
+.footer{
+    margin-top: 50px;
+    text-align: center;
+    /* display: block; */
+    position: absolute;
+    left: 45%;
+    background: transparent;
+    color: #485d69;
+}
+.footer-content p{
+   vertical-align: middle;
+}
+
+.footer-logo{
+    height: 20px;
+    object-fit: cover;
+    object-position: center;
 }

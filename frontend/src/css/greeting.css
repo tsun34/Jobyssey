@@ -1,6 +1,7 @@
 .greeting-wrapper {
     width: 100%;
-    background-color: rgba(76, 106, 164, 0.85);
+    height: 100px;
+    background-color: #fdbf9e;
     font-family: sans-serif;
     color: white;
     font-size: 14px;
