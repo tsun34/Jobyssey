@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AuthRoute} from './util/route_util';
+import { Switch } from 'react-router-dom';
+// import NavBarContainer from './nav/navbar_container';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import HomePage from './components/homePage/home_page';
+
+const App = () => (
+
+  <div>
+    <AuthRoute exact path="/" component={HomePage} />
+  </div>
+);
 
 export default App;
