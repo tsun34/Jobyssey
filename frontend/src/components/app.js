@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from './landing_page';
+import ModalContainer from './modal_container';
 
 const App = () => (
     <div>
@@ -8,6 +9,7 @@ const App = () => (
             <Route exach path="/" component={LandingPage} />
             <Route exach path="/home/" component={LandingPage} />
         </Switch>
+        <ModalContainer />
     </div>
 );
 

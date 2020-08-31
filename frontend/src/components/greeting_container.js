@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting';
+import { openModal } from '../actions/modal_actions';
 
 const mstp = (statue) => {
     return {
@@ -8,6 +9,7 @@ const mstp = (statue) => {
 
 const mdtp = dispatch => {
     return {
+        openModal: modal => dispatch(openModal(modal)),
     };
 };
 
