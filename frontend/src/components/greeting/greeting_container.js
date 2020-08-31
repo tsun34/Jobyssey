@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting';
-import { openModal } from '../actions/modal_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const mstp = (statue) => {
     return {

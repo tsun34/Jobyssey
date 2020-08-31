@@ -4,8 +4,23 @@ import logo from '../../pics/jobyssey_logo.png'
 import '../../css/homepage.css'
 import search from '../../pics/jobsearch.jpg'
 
-const HomePage = () => (
-    <div>
+class HomePage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.onLogInClick = this.onLogInClick.bind(this);
+        this.onSignUpClick = this.onSignUpClick.bind(this);
+    }
+
+    onLogInClick() {
+        this.props.openModal('sign_in');
+    }
+
+    onSignUpClick() {
+        this.props.openModal('sign_up');
+    }
+
+    render() {
+    return <div>
         <nav className='home-nav'>
             <ul className='home-nav-info'>
                 <li><Link to='/'> <img className='home-nav-logo' src={logo} alt="logo"/></Link></li>          
@@ -14,10 +29,10 @@ const HomePage = () => (
             </ul>
             <ul className='home-nav-session'>
                 <li>
-                    <Link className='home-nav-session-button' to='/signup'>Sign Up</Link>
+                    <button className='home-nav-session-button' onClick={this.onSignUpClick}>Sign Up</button>
                 </li>
                 <li>
-                    <Link className='home-nav-session-button' to='/login'>Log In</Link>
+                    <button className='home-nav-session-button' onClick={this.onLogInClick}>Log In</button>
                 </li>
             </ul>
         </nav>
@@ -37,8 +52,8 @@ const HomePage = () => (
             </div>
             <img className='jobyssey-home-img' src={search} alt='jobyssey homepage'/>
         </section>  
-
     </div>
-)
+    }
+};
 
 export default HomePage;
