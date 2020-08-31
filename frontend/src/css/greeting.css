@@ -1,0 +1,46 @@
+.greeting-wrapper {
+    width: 100%;
+    background-color: rgba(76, 106, 164, 0.85);
+    font-family: sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    justify-content: space-between;
+}
+
+.greeting-right-section {
+    justify-content: flex-end;
+}
+
+.greeting-button-wrapper-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.greeting-button-wrapper-below {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.greeting-button-wrapper-top button {
+    margin-right: 1rem;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.greeting-button-wrapper-below button {
+    margin-right: 2rem;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.greeting-button {
+    border-radius: 4px;
+    background-color: white;
+    padding: 6px;
+    border: none;
+}
