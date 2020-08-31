@@ -63,6 +63,7 @@ li{
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    border: none;
 }
 
 .home-nav-session-button:hover {
