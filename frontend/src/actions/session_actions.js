@@ -20,7 +20,7 @@ export const receiveErrors = errors => ({
     errors
 });
 
-export const logoutUser = () = ({
+export const logoutUser = () => ({
     type: RECEIVE_USER_LOGOUT
 });
 

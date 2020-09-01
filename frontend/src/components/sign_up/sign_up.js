@@ -5,7 +5,13 @@ import '../../css/sign_up_log_in.css';
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.user;
+        this.state = {
+            name: '',
+            email: '',
+            password: '',
+            password2: '',
+            errors: []
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
     }
@@ -29,7 +35,7 @@ class SignUp extends React.Component {
             password: this.state.password,
             password2: this.state.password2
         }
-        this.props.signup(user, this.props.history);
+        this.props.signup(user)//, this.props.history);
     }
 
     renderErrors() {
@@ -43,14 +49,14 @@ class SignUp extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.signedIn === true){
-            this.props.history.push('/login');
-        }
+        // if (nextProps.signedIn === true){
+        //     this.props.history.push('/login');
+        // }
         this.setState({errors: nextProps.errors})
     }
 
     render() {
-        const { firstName, lastName, email, password, loading } = this.state;
+        console.log(this.state);
         return (
             <div className="sign-container">
                 <form className="sign-form" onSubmit={this.handleSubmit}>
@@ -93,8 +99,8 @@ class SignUp extends React.Component {
                     <button className="sign-button">Sign up</button>
                     <br />
                     <span>Already have an account? <a href="" onClick={e => this.onSigninClick(e)}>Log in</a></span>
+                    {this.renderErrors()}
                 </form>
-                {this.renderErrors()}
             </div>
         );
     }

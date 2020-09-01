@@ -5,7 +5,11 @@ import { withRouter } from 'react-router-dom';
 class SignIn extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.user;
+        this.state = {
+            email: '',
+            password: '',
+            errors: {}
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
@@ -66,8 +70,8 @@ class SignIn extends React.Component {
                     <button className="sign-button">Demo Login</button>
                     <br />
                     <span>Don't have an account? <a href=""  onClick={e => this.onSignupClick(e)}>Sign up</a></span>
+                    {this.renderErrors()}
                 </form>
-                {this.renderErrors()}
             </div>
         );
     }

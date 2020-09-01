@@ -5,10 +5,6 @@ import { login } from '../../actions/session_actions';
 
 const mstp = (state) => {
     return {
-        user: {
-            email: '',
-            password: ''
-        },
         errors: state.errors.session
     };
 };

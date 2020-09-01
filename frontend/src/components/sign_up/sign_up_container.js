@@ -6,12 +6,6 @@ import { signup } from '../../actions/session_actions';
 
 const mstp = (state) => {
     return {
-        user: {
-            name: '',
-            email: '',
-            password: '',
-            password2: ''
-        },
         signedIn: state.session.isSignedIn,
         errors: state.errors.session
     };

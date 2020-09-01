@@ -4,7 +4,7 @@ import { openModal } from '../../actions/modal_actions';
 import { logout } from '../../actions/session_actions';
 
 
-const mstp = (statue) => {
+const mstp = (state) => {
     return {
         loggedIn: state.session.isAuthenticated
     };
