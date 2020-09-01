@@ -11,7 +11,7 @@ class LandingCompany extends React.Component {
                 <div className="landing-company-row-subtitle">{company}</div>
                 </div>
                 <div className="landing-company-row-footer">
-                    {`${passDays}d`}
+                    {`${passDays}`}
                 </div>
             </div>
         );
