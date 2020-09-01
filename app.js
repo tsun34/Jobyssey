@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require('mongoose');
-const db = require('./config/keys').mongoURI;
+const db = require('./config/prod_keys').mongoURI;
 const users = require('./routes/api/users');
 const jobs = require('./routes/api/jobs');
 const companies = require('./routes/api/companies');
