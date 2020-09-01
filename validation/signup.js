@@ -42,7 +42,7 @@ module.exports = function validateSignupInput(data) {
     }
 
     return {
-        errors,
+        err: errors,
         isValid: Object.keys(errors).length === 0,
     };
 };

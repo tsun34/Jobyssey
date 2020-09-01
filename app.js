@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users');
 const jobs = require('./routes/api/jobs');
+const companies = require('./routes/api/companies');
+const reviews = require('./routes/api/reviews');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -22,7 +24,9 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('Hello World'));
 app.use('/api/users', users);
-// app.use('/api/jobs', jobs);
+app.use('/api/jobs', jobs);
+app.use('/api/companies', companies);
+app.use('/api/reviews', reviews);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
