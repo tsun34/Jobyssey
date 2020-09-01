@@ -32,6 +32,7 @@ class SignIn extends React.Component {
             password: this.state.password
         };
         this.props.login(user);
+        this.props.closeModal();
     }
 
     renderErrors() {
