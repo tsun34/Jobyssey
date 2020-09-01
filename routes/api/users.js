@@ -39,7 +39,7 @@ router.post('/signup', (req, res) => {
                         jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600}, (err, token) => {
                             res.json({
                                 success: true,
-                                token: "Searcher " + token
+                                token: "Bearer " + token
                             });
                         })
                     }).catch(err => console.log(err));
@@ -72,7 +72,7 @@ router.post("/login", (req, res) => {
           jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
             res.json({
               success: true,
-              token: "Searcher " + token
+              token: "Bearer " + token
             });
           });
         } else {

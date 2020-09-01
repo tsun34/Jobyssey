@@ -35,7 +35,7 @@ router.post('/',
         if (!isValid){
             return res.status(400).json(errors);
         }
-        const newJob = newJob({
+        const newJob = new Job({
             user: req.user.id,
             company_name: req.body.company_name,
             position_name: req.body.position_name,

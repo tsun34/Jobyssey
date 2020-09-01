@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Company: [index, show]
     
-router.get('/companies', (req, res) => {
+router.get('/', (req, res) => {
     Company.find()
         .sort({date: -1})
         .then(companies => res.json(companies))
@@ -15,7 +15,7 @@ router.get('/companies', (req, res) => {
             res.status(404).json({ nocompaniesfound: 'No companies found'}));
 });
 
-router.get('/company/:company_id', (req, res) => {
+router.get('/:company_id', (req, res) => {
     Company.findById(req.params.company_id)
         .then(company => res.json(company))
         .catch(err => 
