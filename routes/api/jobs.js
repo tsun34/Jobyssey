@@ -11,7 +11,7 @@ const router = express.Router();
 router.get('/user/:user_id', (req, res) => {
     Job.find({user: req.params.user_id})
         .sort({date: -1}) // sort by differnt date param for differnt stage
-        .then(tweets => res.json(tweets))
+        .then(jobs => res.json(jobs)) 
         .catch(err => 
             res.status(404).json({ nojobsfound: 'No jobs found from that user'}));
 });
