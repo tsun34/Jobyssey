@@ -9,6 +9,12 @@ class Greeting extends React.Component {
             loadingLogout: false,
         }
         this.logoutUser = this.logoutUser.bind(this);
+        this.onCreateJobClick = this.onCreateJobClick.bind(this);
+    }
+
+    onCreateJobClick(e) {
+        e.preventDefault();
+        this.props.openModal('create_job');
     }
     
     logoutUser(e){
@@ -19,17 +25,16 @@ class Greeting extends React.Component {
     render() {
         return (
         <div className="greeting-wrapper">
-            <div>Trust The Timing Of Your Life</div>
-            <button className="greeting-button" onClick={this.logoutUser}>Logout</button>
             <div className="greeting-right-section">
                 <div className="greeting-button-wrapper-top">
                     <button className="greeting-button" Link to='/'>Home</button>
                     <button className="greeting-button">Explore</button>
                     <button className="greeting-button">My Progress</button>
                     <button className="greeting-button">Export Data</button>
-                </div>
-                <div className="greeting-button-wrapper-below">
-                    <button className="greeting-button">Create Job</button>
+                    <button className="greeting-button" onClick={this.logoutUser}>Logout</button>
+                    <div className="greeting-button-right">
+                        <button className="greeting-create-job" onClick={this.onCreateJobClick}>Create Job</button>
+                    </div>
                 </div>
             </div>
         </div>

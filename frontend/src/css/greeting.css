@@ -2,14 +2,18 @@
     width: 100%;
     height: 100px;
     background-color: #fdbf9e;
-    font-family: sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
     color: white;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 300;
     display: flex;
     align-items: center;
     padding: .5rem;
     justify-content: space-between;
+}
+
+.greeting-title {
+    margin-left: 14px;
 }
 
 .greeting-right-section {
@@ -19,7 +23,7 @@
 .greeting-button-wrapper-top {
     display: flex;
     align-items: center;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .greeting-button-wrapper-below {
@@ -28,8 +32,10 @@
 }
 
 .greeting-button-wrapper-top button {
-    margin-right: 1rem;
-    font-size: 10px;
+    margin-right: 3.5rem;
+    /* background-color: transparent; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -39,9 +45,23 @@
     font-weight: 800;
 }
 
+.greeting-button-right {
+    margin-left: 18rem;
+}
+
 .greeting-button {
     border-radius: 4px;
-    background-color: white;
+    background-color: transparent;;
+    padding: 6px;
+    border: none;
+    color: grey;
+}
+
+.greeting-create-job {
+    border-radius: 4px;
+    background-color:lightcyan;
+    color: blue;
+    border: 6px;
     padding: 6px;
     border: none;
 }
