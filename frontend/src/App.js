@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AuthRoute} from './util/route_util';
+import { Switch } from 'react-router-dom';
+import GreetingContainer from './components/greeting/greeting_container'
+import ModalContainer from './components/modal/modal_container';
+// import NavBarContainer from './nav/navbar_container';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import HomePageContainer from './components/homePage/home_page_container';
+
+const App = () => (
+  <div className='slant-display'>
+    <Switch>
+      <AuthRoute exach path="/home" component={GreetingContainer} />
+      <AuthRoute exact path="/" component={HomePageContainer} />
+    </Switch>
+    <ModalContainer />
+  </div>
+);
 
 export default App;
