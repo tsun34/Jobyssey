@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/greeting.css';
 
 class Greeting extends React.Component {
@@ -7,12 +8,19 @@ class Greeting extends React.Component {
         this.state = {
             loadingLogout: false,
         }
+        this.logoutUser = this.logoutUser.bind(this);
     }
     
+    logoutUser(e){
+        e.preventDefault();
+        this.props.logout();
+    }
+
     render() {
         return (
         <div className="greeting-wrapper">
             <div>Trust The Timing Of Your Life</div>
+            <button className="greeting-button" onClick={this.logoutUser}>Logout</button>
             <div className="greeting-right-section">
                 <div className="greeting-button-wrapper-top">
                     <button className="greeting-button" Link to='/'>Home</button>

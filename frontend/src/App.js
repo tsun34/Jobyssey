@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthRoute} from './util/route_util';
+import { AuthRoute, ProtectedRoute} from './util/route_util';
 import { Switch } from 'react-router-dom';
 import GreetingContainer from './components/greeting/greeting_container'
 import ModalContainer from './components/modal/modal_container';
