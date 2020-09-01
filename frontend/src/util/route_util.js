@@ -7,7 +7,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
     !loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/"/>
+      <Redirect to="/home"/>
     )
   )} />
 );
@@ -29,6 +29,6 @@ const mapStateToProps = state => (
   {loggedIn: state.session.isAuthenticated}
 );
 
-export const AuthRoute = withRouter(Auth);
+export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
 
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
