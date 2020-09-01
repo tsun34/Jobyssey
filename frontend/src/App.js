@@ -10,8 +10,11 @@ import HomePageContainer from './components/homePage/home_page_container';
 const App = () => (
   <div className='slant-display'>
     <Switch>
-      <AuthRoute exach path="/home" component={GreetingContainer} />
       <AuthRoute exact path="/" component={HomePageContainer} />
+      <AuthRoute exact path="/login" compoment={} />
+      <AuthRoute exact path="/signup" component={}>
+      <AuthRoute exach path="/home" component={GreetingContainer} />
+      
     </Switch>
     <ModalContainer />
   </div>
