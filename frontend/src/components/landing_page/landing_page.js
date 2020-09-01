@@ -10,9 +10,9 @@ class LandingPage extends React.Component {
       <div className="landing-wrapper">
         <GreetingContainer />
         <div className="landing-content-wrapper">
-            <LandingColumn title="Wishlist" jobNumber={3} />
+            <LandingColumn title="Wishlist" jobNumber={2} />
             <LandingColumn title="Applied" jobNumber={4} />
-            <LandingColumn title="Interview" jobNumber={4} />
+            <LandingColumn title="Interview" jobNumber={3} />
             <LandingColumn title="Offer" jobNumber={5} />
         </div>
       </div>

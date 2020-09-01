@@ -12,16 +12,16 @@ class Greeting extends React.Component {
     render() {
         return (
         <div className="greeting-wrapper">
-            <div>Trust The Timing Of Your Life</div>
+            <div className="greeting-title">Trust The Timing Of Your Life</div>
             <div className="greeting-right-section">
                 <div className="greeting-button-wrapper-top">
                     <button className="greeting-button" Link to='/'>Home</button>
                     <button className="greeting-button">Explore</button>
                     <button className="greeting-button">My Progress</button>
                     <button className="greeting-button">Export Data</button>
-                </div>
-                <div className="greeting-button-wrapper-below">
-                    <button className="greeting-button">Create Job</button>
+                    <div className="greeting-button-right">
+                        <button className="greeting-create-job">Create Job</button>
+                    </div>
                 </div>
             </div>
         </div>
