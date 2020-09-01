@@ -7,6 +7,12 @@ class Greeting extends React.Component {
         this.state = {
             loadingLogout: false,
         }
+        this.onCreateJobClick = this.onCreateJobClick.bind(this);
+    }
+
+    onCreateJobClick(e) {
+        e.preventDefault();
+        this.props.openModal('create_job');
     }
     
     render() {
@@ -20,7 +26,7 @@ class Greeting extends React.Component {
                     <button className="greeting-button">My Progress</button>
                     <button className="greeting-button">Export Data</button>
                     <div className="greeting-button-right">
-                        <button className="greeting-create-job">Create Job</button>
+                        <button className="greeting-create-job" onClick={this.onCreateJobClick}>Create Job</button>
                     </div>
                 </div>
             </div>
