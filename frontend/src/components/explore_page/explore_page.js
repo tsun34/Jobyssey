@@ -3,6 +3,7 @@ import GreetingContainer from '../greeting/greeting_container';
 import '../../css/explore-page.css';
 import { FcSearch } from 'react-icons/fc';
 import { MdSettingsVoice } from 'react-icons/md';
+import ExploreCompanyList from './explore_company_list';
 
 class LandingPage extends React.Component {
 
@@ -15,6 +16,7 @@ class LandingPage extends React.Component {
             <input className="explore-search-input" placeholder="Search company..." type="text" />
             <MdSettingsVoice className="explore-search-icon-right" />
         </div>
+        <ExploreCompanyList />
       </div>
     );
   }
