@@ -5,6 +5,7 @@ import ExploreSearchBar from './explore_search_bar';
 import ExploreCompanyList from './explore_company_list';
 import { FcSearch } from 'react-icons/fc';
 import { MdSettingsVoice } from 'react-icons/md';
+import ExploreCompanyList from './explore_company_list';
 
 class LandingPage extends React.Component {
 
