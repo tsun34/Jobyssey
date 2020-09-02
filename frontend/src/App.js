@@ -17,6 +17,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exach path="/home" component={LandingPageContainer} />
+      <Route exach path="/home" component={LandingPage} />
       <Route exach path="/explore" component={ExplorePage} />
     </Switch>
     <ModalContainer />
