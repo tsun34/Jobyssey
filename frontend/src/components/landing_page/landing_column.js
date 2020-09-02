@@ -3,8 +3,13 @@ import '../../css/landing-page.css';
 import LandingCompanyContainer from './landing_company_container';
 
 class LandingColumn extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
     render() {
         const { title, jobNumber } = this.props;
+        console.log(this.props) 
         return (
         <div className="landing-column">
             <div className="landing-column-title">{title}</div>
