@@ -2,12 +2,10 @@ import React from 'react';
 
 import { AuthRoute, ProtectedRoute} from './util/route_util';
 import { Switch, Route } from 'react-router-dom';
-import GreetingContainer from './components/greeting/greeting_container'
 
 import ModalContainer from './components/modal/modal_container';
 import LandingPageContainer from './components/landing_page/landing_page_container';
 
-import LandingPage from './components/landing_page/landing_page';
 import ExplorePage from './components/explore_page/explore_page';
 import './css/page.css';
 import SearchPage from "./components/search_test/search";

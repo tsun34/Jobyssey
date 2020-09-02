@@ -14,7 +14,6 @@ class LandingCompany extends React.Component {
 
     render() {
         const { job, backgroundColor } = this.props;
-        // console.log(currentUserId)
         return (
             <div className="landing-company-row" onClick={() => this.onIndexClick(job)} style={{ backgroundColor }}>
                 <div className="landing-company-row-details">

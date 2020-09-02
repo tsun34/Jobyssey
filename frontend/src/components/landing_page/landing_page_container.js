@@ -11,6 +11,13 @@ const mstp = (state) => {
     };
 };
 
+const mstp = ({session, jobs}) => {
+    return {
+        currentUserId: session.user.id,
+        jobs,
+    };
+};
+
 const mdtp = dispatch => {
     return {
         openModal: modal => dispatch(openModal(modal)),

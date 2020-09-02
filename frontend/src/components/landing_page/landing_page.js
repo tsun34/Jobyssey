@@ -16,7 +16,13 @@ class LandingPage extends React.Component {
     return Object.values(this.props.jobs.user || {}).filter(job => job.stage === stage)
   }
 
+  componentDidMount() {
+    this.props.fetchUserJobs(this.props.currentUserId);
+  }
+
   render() {
+    const jobs = this.props.jobs.user ?? [];
+    console.log(jobs);
     return (
       <div className="landing-wrapper">
         <GreetingContainer />
@@ -32,5 +38,3 @@ class LandingPage extends React.Component {
 }
 
 export default LandingPage;
-
-// samsam
