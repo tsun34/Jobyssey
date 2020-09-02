@@ -17,13 +17,14 @@
 }
 
 .greeting-right-section {
-    justify-content: flex-end;
+    width: 60%;
 }
 
 .greeting-button-wrapper-top {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    justify-content: space-between;
 }
 
 .greeting-button-wrapper-below {
@@ -55,6 +56,7 @@
     padding: 6px;
     border: none;
     color: grey;
+    cursor: pointer;
 }
 
 .greeting-create-job {
@@ -64,4 +66,61 @@
     border: 6px;
     padding: 6px;
     border: none;
+    cursor: pointer;
+}
+
+.greeting-user-create-job {
+    display: flex;
+    align-items: center;
+}
+
+.greeting-user {
+    margin-right: .5rem;
+    padding-left: 12px;
+}
+
+.greeting-user-container {
+    position: relative;
+    margin-right: 5rem;
+    cursor: pointer;
+    display: flex;
+    padding: .5rem;
+}
+
+.greeting-user-dropdown {
+    display: none;
+    position: absolute;
+    color: #666;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    border-radius: 6px;
+    width: 100%;
+    line-height: 40px;
+    top: 38px;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.greeting-user-row {
+    text-align: center;
+    cursor: pointer;
+}
+
+.greeting-user-container:hover .greeting-user-dropdown {
+    display: block;
+}
+
+.greeting-user-dropdown .greeting-user-row {
+    display: block;
+}
+
+.greeting-user-dropdown .greeting-user-row:hover {
+    color: #fdbf9e;
+    background: transparent;
+}
+
+.greeting-user-container span {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #666;
 }
