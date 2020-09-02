@@ -1,0 +1,16 @@
+.create-job-input {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.create-job-header-text {
+    text-align: center;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
