@@ -5,15 +5,21 @@ import LandingColumn from './landing_column';
 
 class LandingPage extends React.Component {
 
+  componentDidMount() {
+    this.props.fetchUserJobs(this.props.currentUserId);
+  }
+
   render() {
+    const jobs = this.props.jobs.user ?? [];
+    console.log(jobs);
     return (
       <div className="landing-wrapper">
         <GreetingContainer />
         <div className="landing-content-wrapper">
-            <LandingColumn title="Wishlist" jobNumber={2} />
-            <LandingColumn title="Applied" jobNumber={4} />
-            <LandingColumn title="Interview" jobNumber={3} />
-            <LandingColumn title="Offer" jobNumber={5} />
+            <LandingColumn title="Wishlist" jobs={jobs.filter(job => job.stage === 'wishlist')} />
+            <LandingColumn title="Applied" jobs={jobs.filter(job => job.stage === 'applied')} />
+            <LandingColumn title="Interview" jobs={jobs.filter(job => job.stage === 'interview')} />
+            <LandingColumn title="Offer" jobs={jobs.filter(job => job.stage === 'offer')} />
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-import { getJobs, getUserJobs, CreateJob } from '../util/job_api_util';
+import { getJobs, getUserJobs, createJob } from '../util/job_api_util';
 
 export const RECEIVE_JOBS = "RECEIVE_JOBS";
 export const RECEIVE_USER_JOBS = "RECEIVE_USER_JOBS";
@@ -32,7 +32,7 @@ export const fetchUserJobs = id => dispatch => (
 );
 
 export const composeJob = data => dispatch => (
-  CreateJob(data)
+  createJob(data)
     .then(job => dispatch(receiveNewJob(job)))
     .catch(err => console.log(err))
 );
