@@ -31,7 +31,7 @@ class Modal extends React.Component {
                 break;
             case 'create_job':
                 modalContent = < LandingCreateJob />;
-                modelHeaderText = 'Create job';
+                modelHeaderText = 'Add a Job';
                 break;
             default:
                 modalContent = null;

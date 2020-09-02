@@ -16,7 +16,7 @@ const App = () => (
   <div className='slant-display'>
     <Switch>
       <AuthRoute exact path="/" component={HomePageContainer} />
-      <ProtectedRoute exach path="/home" component={LandingPage} />
+      <Route exach path="/home" component={LandingPage} />
       <Route exach path="/explore" component={ExplorePage} />
     </Switch>
     <ModalContainer />
