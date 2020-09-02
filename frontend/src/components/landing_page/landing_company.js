@@ -9,7 +9,7 @@ class LandingCompany extends React.Component {
     }
 
     onIndexClick() {
-        console.log(this.props)
+        // console.log(this.props)
         this.props.openModal('job_index_item');
     }
 

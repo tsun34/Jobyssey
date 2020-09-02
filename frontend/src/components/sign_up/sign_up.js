@@ -57,7 +57,7 @@ class SignUp extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         return (
             <div className="sign-container">
                 <form className="sign-form" onSubmit={this.handleSubmit}>
