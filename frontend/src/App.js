@@ -6,6 +6,7 @@ import GreetingContainer from './components/greeting/greeting_container'
 
 import ModalContainer from './components/modal/modal_container';
 import LandingPage from './components/landing_page/landing_page';
+import ExplorePage from './components/explore_page/explore_page';
 import './css/page.css';
 // import NavBarContainer from './nav/navbar_container';
 
@@ -16,6 +17,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exach path="/home" component={LandingPage} />
+      <Route exach path="/explore" component={ExplorePage} />
     </Switch>
     <ModalContainer />
   </div>

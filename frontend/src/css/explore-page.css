@@ -1,0 +1,37 @@
+.explore-wrapper {
+    height: 100%;
+}
+
+.explore-search-container {
+    display: flex;
+    margin: auto;
+    border-radius: 24px;
+    border: 1.5px solid #dfe1e5;
+    width: 30%;
+    margin-top: 2rem;
+}
+
+.explore-search-icon-left {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+
+.explore-search-icon-right {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
+
+.explore-search-input {
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+}
