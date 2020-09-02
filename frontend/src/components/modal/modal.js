@@ -3,7 +3,7 @@ import '../../css/modal.css';
 import SignInContainer from '../sign_in/sign_in_container';
 import SignUpContainer from '../sign_up/sign_up_container';
 import JobIndexItemContainer from '../job_index/job_index_container'
-import LandingCreateJob from '../landing_page/landing_create_job';
+import LandingCreateJobContainer from '../landing_page/landing_create_job_container';
 import '../../css/create_job.css';
 
 class Modal extends React.Component {
@@ -34,7 +34,7 @@ class Modal extends React.Component {
                 modalHeaderTextClassName = null;
                 break;
             case 'create_job':
-                modalContent = < LandingCreateJob />;
+                modalContent = < LandingCreateJobContainer />;
                 modelHeaderText = 'Add a Job';
                 modalHeaderTextClassName = "create-job-header-text";
                 break;

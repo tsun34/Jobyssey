@@ -21,6 +21,7 @@ class LandingColumn extends React.Component {
                         backgroundColor={getRandomBackgroundColor()} 
                         position={job.position_name} 
                         company={job.company_name}
+                        key={job._id}
                     />)
             }
         </div>);
