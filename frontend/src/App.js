@@ -8,6 +8,7 @@ import ModalContainer from './components/modal/modal_container';
 import LandingPageContainer from './components/landing_page/landing_page_container';
 
 import LandingPage from './components/landing_page/landing_page';
+import ExplorePage from './components/explore_page/explore_page';
 import './css/page.css';
 import SearchPage from "./components/search_test/search";
 // import NavBarContainer from './nav/navbar_container';
@@ -22,6 +23,7 @@ const App = () => (
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exact path="/home" component={LandingPageContainer} />
       <ProtectedRoute exact path="/myprogress" component={VizContainer} />
+      <Route exach path="/explore" component={ExplorePage} />
     </Switch>
     <ModalContainer />
   </div>
