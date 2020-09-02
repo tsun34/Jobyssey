@@ -9,6 +9,7 @@
     border: 1.5px solid #dfe1e5;
     width: 30%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .explore-search-icon-left {
@@ -34,4 +35,25 @@
     flex: 100%;
     -webkit-tap-highlight-color: transparent;
     font-size: 16px;
+}
+
+.explore-company-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.explore-company-card {
+    width: 20%;
+    background-color: transparent;
+    border: 1.5px solid #dfe1e5;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 2.5%;
 }
