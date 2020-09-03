@@ -1,7 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import '../../css/sign_up_log_in.css';
-
+import { Link, withRouter} from 'react-router-dom';
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
@@ -14,13 +13,16 @@ class SignUp extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
+        this.switchModal = this.switchModal.bind(this);
     }
 
-    onSigninClick(e) {
+    
+    switchModal(e) {
         e.preventDefault();
+        this.props.closeModal();
         this.props.openModal('sign_in');
     }
-    
+
     update(field){
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -35,7 +37,7 @@ class SignUp extends React.Component {
             password: this.state.password,
             password2: this.state.password2
         }
-        this.props.signup(user)//, this.props.history);
+        this.props.signup(user);
         this.props.closeModal();
     }
 
@@ -49,15 +51,11 @@ class SignUp extends React.Component {
         )
     }
 
-    componentWillReceiveProps(nextProps) {
-        // if (nextProps.signedIn === true){
-        //     this.props.history.push('/login');
-        // }
-        this.setState({errors: nextProps.errors})
+    componentDidMount() {
+        this.props.receiveErrors([])
     }
 
     render() {
-        // console.log(this.state);
         return (
             <div className="sign-container">
                 <form className="sign-form" onSubmit={this.handleSubmit}>
@@ -99,7 +97,7 @@ class SignUp extends React.Component {
                     />
                     <button className="sign-button">Sign up</button>
                     <br />
-                    <span>Already have an account? <a href="" onClick={e => this.onSigninClick(e)}>Log in</a></span>
+                    <span>Already have an account? <a href="" onClick={this.switchModal}>Log in</a></span>
                     {this.renderErrors()}
                 </form>
             </div>
@@ -107,4 +105,4 @@ class SignUp extends React.Component {
     }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

@@ -12,7 +12,7 @@ const mstp = (state) => {
 
 const mdtp = dispatch => {
     return {
-        logout,
+        logout: () => dispatch(logout()),
         openModal: modal => dispatch(openModal(modal)),
 
     };

@@ -22,5 +22,15 @@ router.get('/:company_id', (req, res) => {
             res.status(404).json({ nocompanyfound: 'No company found with that id'}));
 });
 
-module.exports = router;
+router.post('/search-companies', (req, res) => {
+    let companyName = new RegExp("^"+req.body.query)
+    Company.find({name: { $regex:companyName, $options: 'i' }})
+    .then(company => {
+        res.json(company)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+})
 
+module.exports = router;
