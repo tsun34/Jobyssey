@@ -23,6 +23,7 @@
 .review-company-reviews {
     width: 50%;
     margin: auto;
+<<<<<<< HEAD
     align-items: flex-end;
 }
 
@@ -51,6 +52,11 @@
 
 .review-row {
     width: 100%;
+=======
+}
+
+.review-row {
+>>>>>>> review page initial layout
     border-bottom: 1px solid #ece9f2;
     padding-bottom: .5rem;
     margin-bottom: 1rem;
