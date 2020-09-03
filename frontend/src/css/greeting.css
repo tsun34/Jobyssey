@@ -59,6 +59,11 @@
     cursor: pointer;
 }
 
+.greeting-button-wrapper-top a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .greeting-create-job {
     border-radius: 4px;
     background-color:lightcyan;

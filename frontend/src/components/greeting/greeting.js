@@ -30,9 +30,9 @@ class Greeting extends React.Component {
             <div className="greeting-right-section">
                 <div className="greeting-button-wrapper-top">
                     <div>
-                        <button className="greeting-button" Link to='/'>Home</button>
-                        <button className="greeting-button">Explore</button>
-                        <button className="greeting-button">My Progress</button>
+                        <Link to="/"><button className="greeting-button">Home</button></Link>
+                        <Link to="/explore"><button className="greeting-button">Explore</button></Link>
+                        <Link to="/myprogress"><button className="greeting-button">My Progress</button></Link>
                         <button className="greeting-button">Export Data</button>
                     </div>
                     <div className="greeting-user-create-job">
