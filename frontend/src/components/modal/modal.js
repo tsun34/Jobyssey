@@ -26,11 +26,11 @@ class Modal extends React.Component {
                 modelHeaderText = 'Sign up';
                 break;
             case 'job_index_item':
-                modalContent = <JobIndexItemContainer />;
+                modalContent = <JobIndexItemContainer job={this.props.modal.modalProps}/>;
                 modelHeaderText = '';
                 break;
             case 'create_job':
-                modalContent = < LandingCreateJob />;
+                modalContent = <LandingCreateJob />;
                 modelHeaderText = 'Create job';
                 break;
             default:

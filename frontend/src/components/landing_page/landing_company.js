@@ -8,21 +8,18 @@ class LandingCompany extends React.Component {
         this.onIndexClick = this.onIndexClick.bind(this);
     }
 
-    onIndexClick() {
-        // console.log(this.props)
-        this.props.openModal('job_index_item');
+    onIndexClick(job) {
+        this.props.openModalWithProps('job_index_item', job);
     }
 
     render() {
-        const { backgroundColor, position, company, passDays } = this.props;
+        const { job, backgroundColor } = this.props;
+        // console.log(currentUserId)
         return (
-            <div className="landing-company-row" onClick={this.onIndexClick} style={{ backgroundColor }}>
+            <div className="landing-company-row" onClick={() => this.onIndexClick(job)} style={{ backgroundColor }}>
                 <div className="landing-company-row-details">
-                <div className="landing-company-row-title">{position}</div>
-                <div className="landing-company-row-subtitle">{company}</div>
-                </div>
-                <div className="landing-company-row-footer">
-                    {`${passDays}`}
+                <div className="landing-company-row-title">{job.position_name}</div>
+                <div className="landing-company-row-subtitle">{job.company_name}</div>
                 </div>
             </div>
         );

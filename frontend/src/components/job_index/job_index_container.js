@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import JobIndexItem from './job_index_item';
 import { openModal } from '../../actions/modal_actions';
 
-const mstp = (statue) => {
+const mstp = (state) => {
     return {
+
     };
 };
 
