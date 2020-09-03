@@ -1,6 +1,6 @@
 import { RECEIVE_JOBS, RECEIVE_USER_JOBS, RECEIVE_NEW_JOB } from '../actions/job_actions';
   
-  const JobsReducer = (state = { all: {}, job: {}, new: undefined }, action) => {
+  const JobsReducer = (state = { all: {}, job: {} }, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
     switch(action.type) {
@@ -11,7 +11,7 @@ import { RECEIVE_JOBS, RECEIVE_USER_JOBS, RECEIVE_NEW_JOB } from '../actions/job
         newState.user = action.jobs.data;
         return newState;
       case RECEIVE_NEW_JOB:
-        newState.new = action.job.data
+        newState.user = [...newState.user, action.job.data];
         return newState;
       default:
         return state;
