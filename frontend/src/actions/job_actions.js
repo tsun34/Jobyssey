@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { getUserJobs, createJob } from '../util/job_api_util';
-=======
-import { getJobs, getUserJobs, createJob } from '../util/job_api_util';
->>>>>>> cee1387e03bb93d16e8ef81e7143d78cb395dc49
 
 // export const RECEIVE_JOBS = "RECEIVE_JOBS";
 export const RECEIVE_USER_JOBS = "RECEIVE_USER_JOBS";
