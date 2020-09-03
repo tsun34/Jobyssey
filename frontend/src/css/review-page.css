@@ -1,0 +1,32 @@
+.review-wrapper {
+    height: 100%;
+}
+
+.review-company-name {
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid #ece9f2;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.review-company-description {
+    width: 50%;
+    margin: auto;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.review-company-reviews {
+    width: 50%;
+    margin: auto;
+}
+
+.review-row {
+    border-bottom: 1px solid #ece9f2;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
