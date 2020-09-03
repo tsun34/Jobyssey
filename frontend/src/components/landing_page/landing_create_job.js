@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/landing-page.css';
 import '../../css/sign_up_log_in.css';
+import '../../css/create_job.css';
 
 class LandingCreateJob extends React.Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class LandingCreateJob extends React.Component {
             <div className="sign-container">
                 <form className="sign-form">
                     <input
-                        className="sign-input"
+                        className="create-job-input"
                         onChange={this.onCompanyNameChange}
                         placeholder="Company Name *"
                         type="text"
@@ -58,7 +59,7 @@ class LandingCreateJob extends React.Component {
                         required
                      />
                     <input
-                        className="sign-input"
+                        className="create-job-input"
                         onChange={this.onPositionChange}
                         placeholder="Position *"
                         type="text"
@@ -75,7 +76,7 @@ class LandingCreateJob extends React.Component {
                     />
                     <div className="landing-menu-container">
                         <input
-                            className="sign-input"
+                            className="create-job-input"
                             placeholder="Category *"
                             type="text"
                             value={category}

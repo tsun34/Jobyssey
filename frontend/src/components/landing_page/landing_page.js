@@ -24,6 +24,18 @@ class LandingPage extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchUserJobs(this.props.currentUserId);
+  }
+
+  componentDidUpdate(prevProps, _prevState, _snapshot) {
+    const prevJobs = prevProps.jobs.user ?? [];
+    const jobs = this.props.jobs.user ?? []; 
+    if (jobs.length != prevJobs.length) {
+      this.props.fetchUserJobs(this.props.currentUserId);
+    }
+  }
+
   render() {
     const jobs = this.props.jobs.user ?? [];
     return (
