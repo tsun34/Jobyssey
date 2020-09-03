@@ -10,6 +10,11 @@
     border: 1px solid #9aa7b2;
     color: white;
     border-radius: 4px;
+}
+
+.review-company-name {
+    width: 50%;
+    margin: auto;
     border-bottom: 1px solid #ece9f2;
     text-align: center;
     padding-top: 1rem;
