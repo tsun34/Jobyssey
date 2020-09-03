@@ -11,6 +11,7 @@ class SignIn extends React.Component {
             errors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
 
@@ -32,6 +33,13 @@ class SignIn extends React.Component {
             password: this.state.password
         };
         this.props.login(user);
+        this.props.closeModal();
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        const demoUser = {email: 'demoUser@gmail.com', password: 'demoUser'};
+        this.props.login(demoUser);
         this.props.closeModal();
     }
 
@@ -68,14 +76,15 @@ class SignIn extends React.Component {
                         required
                     />
                     <button className="sign-button" type="submit">Log in</button>
-                    <button className="sign-button">Demo Login</button>
+                    <button className="sign-button" onClick={this.handleDemo}>Demo Login</button>
                     <br />
                     <span>Don't have an account? <a href=""  onClick={e => this.onSignupClick(e)}>Sign up</a></span>
                     {this.renderErrors()}
                 </form>
+                {/* <button onClick={this.handleDemo}>Continue as Demo User</button> */}
             </div>
         );
     }
 }
 
-export default SignIn;
+export default withRouter(SignIn);
