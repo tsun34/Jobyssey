@@ -22,8 +22,7 @@ class LandingColumn extends React.Component {
                 jobs.map(job => 
                     <LandingCompanyContainer 
                         backgroundColor={getRandomBackgroundColor()} 
-                        position={job.position_name} 
-                        company={job.company_name}
+                        job={job}
                         key={job._id}
                     />)
             }

@@ -2,7 +2,6 @@ import React from 'react';
 import '../../css/landing-page.css';
 
 class LandingCompany extends React.Component {
-
     constructor(props) {
         super(props);
         this.onIndexClick = this.onIndexClick.bind(this);
