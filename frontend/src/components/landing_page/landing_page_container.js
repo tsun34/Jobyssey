@@ -4,13 +4,6 @@ import { openModal } from '../../actions/modal_actions';
 // import { STATES } from 'mongoose';
 import {fetchUserJobs} from '../../actions/job_actions'
 
-const mstp = (state) => {
-    return {
-        jobs: state.jobs,
-        currentUserId: state.session.user.id
-    };
-};
-
 const mstp = ({session, jobs}) => {
     return {
         currentUserId: session.user.id,
