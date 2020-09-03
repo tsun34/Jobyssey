@@ -1,8 +1,8 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import '../../css/explore-page.css';
-import ExploreSearchBar from './explore_search_bar';
-import ExploreCompanyList from './explore_company_list';
+import ExploreSearchBarContainer from './explore_search_bar_container';
+import ExploreCompanyListContainer from './explore_company_list_container';
 
 class LandingPage extends React.Component {
 
@@ -10,8 +10,8 @@ class LandingPage extends React.Component {
     return (
       <div className="explore-wrapper">
         <GreetingContainer />
-        <ExploreSearchBar />
-        <ExploreCompanyList />
+        <ExploreSearchBarContainer />
+        <ExploreCompanyListContainer />
       </div>
     );
   }
