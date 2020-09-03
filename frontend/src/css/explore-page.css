@@ -1,0 +1,59 @@
+.explore-wrapper {
+    height: 100%;
+}
+
+.explore-search-container {
+    display: flex;
+    margin: auto;
+    border-radius: 24px;
+    border: 1.5px solid #dfe1e5;
+    width: 30%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.explore-search-icon-left {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: .5rem;
+}
+
+.explore-search-icon-right {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
+
+.explore-search-input {
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+}
+
+.explore-company-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.explore-company-card {
+    width: 20%;
+    background-color: transparent;
+    border: 1.5px solid #dfe1e5;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 2.5%;
+}
