@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
-
+import '../../css/job_index_item.css'
 
 class JobIndexItem extends React.Component {
     constructor(props) {
@@ -9,34 +7,91 @@ class JobIndexItem extends React.Component {
     }
 
     render() {
+        const job = this.props.job
         return (
         <div className='job-index-item'>
-            <ul>
-                    <li>company_name: 
-                        {/* {job.company_name} */}
+                <ul >
+                    <li className='li-details'>company_name: 
+                        {job.company_name}
+                    </li >
+                    <li className='li-details'>position_name: 
+                        {job.position_name}
                     </li>
-                    <li>position_name: 
-                        {/* {job.position_name} */}
+                    <li className='li-details'>stage: 
+                        {job.stage}
                     </li>
-                    <li>stage: 
-                        {/* {job.stage} */}
+                    <li className='li-details'>application_link: 
+                        {job.application_link}
                     </li>
-                    <li>application_link: 
-                        {/* {job.application_link} */}
-                    </li>
-                    <li>salary:
-                        {/* {job.salary} */}
-                    </li>
-                    {/* <span>{job.location}</span>
-                    <span>{job.deadline}</span>
-                    <span>{job.date_applied}</span>
-                    <span>{job.interview_date}</span>
-                    <span>{job.decision_date}</span>
-                    <span>{job.decision}</span>
-                    <span>{job.notes}</span>
-                    <span>{job.networking_contacts}</span>
-                    <span>{job.studying_preparation}</span> */}
-                    {/* <p>hello</p> */}
+                    {
+                        job.salary && 
+                        <li className='li-details'>salary:
+                            {job.salary}
+                        </li>
+                    }
+                    {
+                        job.location &&
+                        <li className='li-details'>location:
+                            {job.location}
+                        </li>
+                    }
+
+                    {
+                        job.deadline &&
+                        <li className='li-details'>deadline:
+                            {job.deadline}
+                        </li>
+                    }
+                    
+                    {
+                        job.date_applied &&
+                        <li className='li-details'>date_applied:
+                            {job.date_applied}
+                        </li>
+                    }
+
+                    {
+                        job.interview_date &&
+                        <li className='li-details'>interview_date:
+                            {job.interview_date}
+                        </li>
+                    }
+
+                    {
+                        job.decision_date &&
+                        <li className='li-details'>decision_date:
+                            {job.decision_date}
+                        </li>
+                    }
+                    
+                    {
+                        job.decision &&
+                        <li className='li-details'>decision:
+                            {job.decision}
+                        </li>
+                    }
+
+                    {
+                        job.notes &&
+                        <li className='li-details'>notes:
+                            {job.notes}
+                        </li>
+                    }
+
+                    {
+                        job.networking_contacts &&
+                        <li className='li-details'>networking_contacts:
+                            {job.networking_contacts}
+                        </li>
+                    }
+                    
+                    {
+                        job.studying_preparation &&
+                        <li className='li-details'>studying_preparation:
+                            {job.studying_preparation}
+                        </li>
+                    }
+                    
             </ul>
         </div>
         )
