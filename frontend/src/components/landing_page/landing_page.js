@@ -18,6 +18,7 @@ class LandingPage extends React.Component {
 =======
   }
 
+<<<<<<< HEAD
   componentDidUpdate(prevProps, _prevState, _snapshot) {
     const prevJobs = prevProps.jobs.user ?? [];
     const jobs = this.props.jobs.user ?? []; 
@@ -27,6 +28,8 @@ class LandingPage extends React.Component {
 >>>>>>> review page complete
   }
 
+=======
+>>>>>>> review page everything
   render() {
     return (
       <div className="landing-wrapper">

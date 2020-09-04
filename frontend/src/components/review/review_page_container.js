@@ -6,6 +6,7 @@ import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
 
 const mstp = ({reviews, companies, session}) => {
+<<<<<<< HEAD
     return {
         reviews: Object.values(reviews.all) ?? [],
         company: companies.show,
@@ -22,6 +23,12 @@ const mstp = ({reviews, companies}) => {
         reviews: Object.values(reviews.all) ?? [],
         company: companies.show,
 >>>>>>> review page initial layout
+=======
+    return {
+        reviews: Object.values(reviews.all) ?? [],
+        company: companies.show,
+        currentUserId: session.user.id,
+>>>>>>> review page everything
     };
 };
 
