@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
     const jobs = this.props.jobs.user ?? [];
     return (
       <div className="landing-wrapper">
-        <GreetingContainer />
+        <GreetingContainer jobs={jobs} />
         <div className="landing-content-wrapper">
           <LandingColumnContainer title="Wishlist" jobs={this.getJobsByStage("wishlist")}/>
           <LandingColumnContainer title="Applied" jobs={this.getJobsByStage("applied")}/>

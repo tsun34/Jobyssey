@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/greeting.css';
 import { GrUserExpert } from 'react-icons/gr';
+import { CSVLink, CSVDownload } from "react-csv";
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -25,7 +26,23 @@ class Greeting extends React.Component {
 
     render() {
         const currentUser = this.props.currentUser;
-        return (
+        
+        let download;
+        if (window.location.href.split('/')[4] === "home") {
+            download = <CSVLink
+                className="greeting-button"
+                data={this.props.jobs}
+                // headers={}
+                filename={'demoJobApps.csv'}
+                target='_self'
+            >
+                Export Data
+            </CSVLink>;
+        } else {
+            download = null;
+        }
+
+        return ( 
         <div className="greeting-wrapper">
             <div className="greeting-user-container">
                 <div className="greeting-user-container-top">
@@ -44,7 +61,9 @@ class Greeting extends React.Component {
                     <Link to="/" className="greeting-button">Home</Link>
                     <Link to="/explore" className="greeting-button">Explore</Link>
                     <Link to="/myprogress" className="greeting-button">My Progress</Link>
-                    <Link to="/" className="greeting-button">Export Data</Link>
+                    {console.log(window.location.pathname)}
+                    {download}
+
                 </div>
                 <button className="greeting-create-job" onClick={this.onCreateJobClick}><i class="fas fa-plus"> </i> Create Job</button>
             </div>
