@@ -23,4 +23,8 @@ export const postReview = data => dispatch => (
     createReview(data)
       .then(reivew => dispatch(receiveNewReview(reivew)))
       .catch(err => console.log(err))
+<<<<<<< HEAD
   );
+=======
+  );
+>>>>>>> review page complete

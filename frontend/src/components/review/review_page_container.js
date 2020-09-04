@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ReviewPage from './review_page';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
 
@@ -11,6 +12,9 @@ const mstp = ({reviews, companies, session}) => {
         currentUserId: session.user.id,
 =======
 import { fetchCompanyReviews } from '../../actions/review_actions';
+=======
+import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
+>>>>>>> review page complete
 import { fetchCompany } from '../../actions/company_action';
 
 const mstp = ({reviews, companies}) => {
@@ -25,9 +29,13 @@ const mdtp = dispatch => {
     return {
         fetchCompanyReviews: companyId => dispatch(fetchCompanyReviews(companyId)),
 <<<<<<< HEAD
+<<<<<<< HEAD
         postReview: data => dispatch(postReview(data)),
 =======
 >>>>>>> review page initial layout
+=======
+        postReview: data => dispatch(postReview(data)),
+>>>>>>> review page complete
         fetchCompany: companyId => dispatch(fetchCompany(companyId)),
     };
 };
