@@ -6,12 +6,14 @@ import test1 from '../../pics/test1.png'
 import personal_job_task from '../../pics/personal_job_task.png'
 import visual from '../../pics/visual.png'
 import explore from '../../pics/explore.png' 
+import profilepic from '../../pics/profilepic.png'
 
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.onLogInClick = this.onLogInClick.bind(this);
         this.onSignUpClick = this.onSignUpClick.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     onLogInClick() {
@@ -21,6 +23,17 @@ class HomePage extends React.Component {
     onSignUpClick() {
         this.props.openModal('sign_up');
     }
+
+    onBackToTopClick() {
+        window.scrollTo(0, 0)
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        const demoUser = { email: 'demoUser@gmail.com', password: 'demoUser' };
+        this.props.login(demoUser);
+    }
+
 
     render() {
     return <div>
@@ -40,15 +53,16 @@ class HomePage extends React.Component {
 
         <section className='jobyssey-home-section'>
             <div>
-                <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goal</h1>
+                <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goals</h1>
                 <span className='jobyssey-home-body'>Stay on track</span>
-                <p className='jobyssey-home-note'>Need to create an account? <Link to="/login" className='slant-home-note-link'> Get started</Link></p>
+                <p className='jobyssey-home-note' >Need to create an account? <span onClick={this.onSignUpClick} className='jobyssey-home-note-link'> Get started</span></p>
+                <p className="jobyssey-home-note-link" onClick={this.handleDemo}>Try with Demo Login</p>
             </div>
             <img className='jobyssey-home-img' src={test1} alt='jobyssey homepage'/>
         </section>  
 
         <section className='personal-task-section'>
-            <div>
+            <div className='jobyssey-home-box'>
                 <img className='jobyssey-task-img' src={personal_job_task} alt='jobyssey homepage' />
                 <span className='jobyssey-task-text'>
                     <h1>Stay organized</h1>
@@ -59,36 +73,57 @@ class HomePage extends React.Component {
             </div>
         </section>
         <section className='personal-task-section'>
-            <div>
-                <span className='jobyssey-task-text'>
+            <div className='jobyssey-home-box'>
+                <span className='visual-task-text'>
                     <h1>Visual your success</h1>
                     <span className='jobyssey-task-note'>
                         Jobyseey incorporates the d3-sankey library and generates personalized sankey diagrams to easily visualize the progress of job searching you have accomplished. 
                     </span>
                 </span>
-                <img className='jobyssey-task-img' src={visual} alt='jobyssey homepage' />
+                <img className='jobyssey-visual-img' src={visual} alt='jobyssey homepage' />
             </div>
         </section>
         <section className='personal-task-section'>
-            <div>
+            <div className='jobyssey-home-box'>
                 <img className='jobyssey-task-img' src={explore} alt='jobyssey homepage' />
                 <span className='jobyssey-task-text'>
-                    <h1>Share your experience</h1>
+                    <h1>Explore & Share</h1>
                     <span className='jobyssey-task-note'>
                         Jobyssey is a safe place for job seekers to share their interviewing experiences. Users can search and view other job seekers’ experience at different companies.
                     </span>
                 </span>
             </div>
         </section>
-        <div className='footer'>
-                <Link to='/'> <img className='footer-logo' src={logo} alt="logo" /></Link>
-            <div className='footer-content'>
-                <p>About</p>
-                <p>Privacy & Terms</p>
-                <p>Question?</p>
-                <p>Manage your account and privacy</p>
+        <h1 className='contributor-our-team' >Our Team</h1>
+        <section className='contributor-section'>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Xiao Yu</h3>
             </div>
-
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Charlotte Sun</h3>
+            </div>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Maggie Yao</h3>
+            </div>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Phillip Tynan</h3>
+            </div>
+        </section>
+        <div className='footer'>
+            <div className='footer-content' >
+                <span>About</span>
+                <span>Privacy & Terms</span>
+                <span>Question?</span>
+                <span>Manage your account and privacy</span>
+            </div>
+            <Link to='/'> <img className='footer-logo' src={logo} alt="logo" /></Link>
+            <div>
+                <button className='back-to-top-btn' onClick={this.onBackToTopClick}> Back To Top</button>
+            </div>
         </div>
     </div>
     }
