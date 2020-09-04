@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import JobIndexItem from './job_index_item';
-import { openModal } from '../../actions/modal_actions';
+import { removeUserJob } from '../../actions/job_actions'; 
+import { closeModal } from '../../actions/modal_actions';
 
 const mstp = (state) => {
     return {
@@ -10,7 +11,8 @@ const mstp = (state) => {
 
 const mdtp = dispatch => {
     return {
-        openModal: modal => dispatch(openModal(modal)),
+        removeUserJob: (id) => dispatch(removeUserJob(id)),
+        closeModal: () => dispatch(closeModal()),
     };
 };
 
