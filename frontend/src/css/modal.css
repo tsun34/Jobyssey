@@ -11,12 +11,13 @@
 .modal-container {
     background-color: white;
     border-radius: 4px;
-    /* max-height: auto; */
     left: 50%;
     position: relative;
     top: 40%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .modal-header {
@@ -28,7 +29,17 @@
     width: 100%;
 }
 
+.modal-header-text {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5;
+}
+
 .close-button {
+    align-self: flex-end;
     text-align: center;
     border: none;
     border-radius: 50%;

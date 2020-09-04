@@ -1,11 +1,84 @@
 .li-details{
-    display: block;
-    border-bottom: dashed 2px rgb(248, 207, 191);
-    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    color: #2d2d5b;
+    margin: 5px 0;
 }
 
-.job-index-item{
-    margin: 40px;
+.li-title{
+    color: black;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 5px 15px 8px 5px;
+}
+
+.li-field{
+    text-align: center;
+    border-radius: 2px;
+    background-color: lavender;
+    padding: 5px 10px;
+    width: 60%;
+    height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.li-field:hover{
+    overflow: visible;
+}
+
+.li-textfield{
+    border-radius: 2px;
+    background-color: lavender;
+    padding: 5px 10px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+}
+
+.li-textfield:hover{
+    overflow: visible;
+}
+
+.job-index{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.job-index-top{
+    display: flex;
+    flex-direction: row;
+}
+
+.job-index-top-left{
+    width: 60%;
+    padding: 0;
+}
+
+.job-index-top-right{
+    width: 40%;
+}
+
+.job-index-bottom{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.li-textbox{
+    flex: 1;
+    padding: 0 10px 10px 10px;
+    margin: 0 5px;
+    height: auto;
+    font-family: sans-serif;
+    font-size: 14px;
 }

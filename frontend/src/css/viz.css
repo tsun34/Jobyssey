@@ -1,0 +1,9 @@
+.viz-container{
+    padding: 20px;
+    align-items: center;
+}
+
+.viz-graph{
+    align-self: center;
+    margin: 50px;
+}

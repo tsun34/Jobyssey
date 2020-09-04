@@ -16,27 +16,31 @@ class Modal extends React.Component {
         if(!modal) {
             return null;
         }
-        let modalContent, modelHeaderText, modalHeaderTextClassName;
+        let modalContent, modelHeaderText, modalHeaderTextClassName, width;
         switch (modal) {
             case 'sign_in':
                 modalContent = <SignInContainer />;
                 modelHeaderText = 'Log in';
                 modalHeaderTextClassName = null;
+                width = "500px";
                 break;
             case 'sign_up':
                 modalContent = <SignUpContainer />;
                 modelHeaderText = 'Sign up';
                 modalHeaderTextClassName = null;
+                width = "500px";
                 break;
             case 'job_index_item':
                 modalContent = <JobIndexItemContainer job={this.props.modal.modalProps}/>;
-                modelHeaderText = '';
+                modelHeaderText = 'Application Details';
                 modalHeaderTextClassName = null;
+                width = "70%";
                 break;
             case 'create_job':
                 modalContent = < LandingCreateJobContainer />;
-                modelHeaderText = 'Add a Job';
+                modelHeaderText = 'Add an Application';
                 modalHeaderTextClassName = "create-job-header-text";
+                width = "70%";
                 break;
             default:
                 modalContent = null;
@@ -46,11 +50,9 @@ class Modal extends React.Component {
         }
         return (
             <div className="modal-open-background">
-                <div className="modal-container">
-                    <div className="modal-header">
-                        <h3 className={modalHeaderTextClassName != null ? modalHeaderTextClassName : "sign-header-text"}>{modelHeaderText}</h3>
-                        <button className="close-button" onClick={this.props.closeModal}>&times;</button>
-                    </div>
+                <div className="modal-container" style={{width: width}}>
+                    <button className="close-button" onClick={this.props.closeModal}>&times;</button>
+                    <h3 className="modal-header-text">{modelHeaderText}</h3>
                     {modalContent}
                 </div>
             </div>

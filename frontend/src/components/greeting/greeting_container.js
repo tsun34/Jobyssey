@@ -6,7 +6,8 @@ import { logout } from '../../actions/session_actions';
 
 const mstp = (state) => {
     return {
-        loggedIn: state.session.isAuthenticated
+        loggedIn: state.session.isAuthenticated,
+        currentUser: state.session.user
     };
 };
 
