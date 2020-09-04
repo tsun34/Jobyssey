@@ -44,8 +44,8 @@ class LandingPage extends React.Component {
         <div className="landing-content-wrapper">
           <LandingColumnContainer title="Wishlist" jobs={this.getJobsByStage("wishlist")}/>
           <LandingColumnContainer title="Applied" jobs={this.getJobsByStage("applied")}/>
-          <LandingColumnContainer title="Interview" jobs={this.getJobsByStage("interview")}/>
-          <LandingColumnContainer title="Decision" jobs={this.getJobsByStage("offer")}/>
+          <LandingColumnContainer title="Interview" jobs={this.getJobsByStage("interviewing")}/>
+          <LandingColumnContainer title="Decision" jobs={this.getJobsByStage("decision")}/>
         </div>
       </div>
     );
