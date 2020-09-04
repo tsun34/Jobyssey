@@ -6,6 +6,7 @@ import test1 from '../../pics/test1.png'
 import personal_job_task from '../../pics/personal_job_task.png'
 import visual from '../../pics/visual.png'
 import explore from '../../pics/explore.png' 
+import profilepic from '../../pics/profilepic.png'
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -91,6 +92,25 @@ class HomePage extends React.Component {
                         Jobyssey is a safe place for job seekers to share their interviewing experiences. Users can search and view other job seekers’ experience at different companies.
                     </span>
                 </span>
+            </div>
+        </section>
+        <h1 className='contributor-our-team' >Our Team</h1>
+        <section className='contributor-section'>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Xiao Yu</h3>
+            </div>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Charlotte Sun</h3>
+            </div>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Maggie Yao</h3>
+            </div>
+            <div className='contributor-div'>
+                <img className='contributor-img' src={profilepic} />
+                <h3>Phillip Tynan</h3>
             </div>
         </section>
         <div className='footer'>

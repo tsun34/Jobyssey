@@ -1,6 +1,9 @@
-
+html,body{
+    position: relative;
+    width:100%;
+}
 .home-nav{
-    width: 100%;
+    width: 100vw;
     height: 120px;
     display: flex;
     flex-direction: row;
@@ -100,7 +103,7 @@ li{
 }
 
 .jobyssey-home-title{
-    font-family: 'Blckham Script';
+    font-family: 'Raleway';
     font-size: 46px;
     font-weight: bold;
     letter-spacing: 5px;
@@ -108,10 +111,11 @@ li{
     margin-bottom: 16px;
     margin-right: 10px;
     padding-bottom: 30px;
+    margin-left: 20px;
 }
 
 .jobyssey-home-body{
-    font-family: 'Pangolin';
+    font-family: 'Raleway';
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 32px;
@@ -199,6 +203,9 @@ li{
 
 .jobyssey-home-box{
     display: flex;
+    align-items: center;
+    flex-direction: row;
+
 }
 
 .visual-task-text{
@@ -224,4 +231,36 @@ li{
 
 .back-to-top-btn:hover{
     color: gray;
+}
+
+.contributor-our-team{
+    /* flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;*/
+    text-align: center;  
+    margin-top: 5%;
+}
+
+.contributor-section{
+    height: 200px;
+    width: 100vw;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.contributor-img{
+    height: auto;
+    width: 20%;
+}
+
+.contributor-div {
+    width: 500px;
+    /* height: 100px; */
+    margin: 0px;
+    padding: 0px;
 }
