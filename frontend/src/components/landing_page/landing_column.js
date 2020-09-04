@@ -10,7 +10,13 @@ class LandingColumn extends React.Component {
         this.state = {
             isSortedByDate: false
         }
+        this.onCreateJobClick = this.onCreateJobClick.bind(this);
         this.onSortByDateButtonClick = this.onSortByDateButtonClick.bind(this)
+    }
+
+    onCreateJobClick(e) {
+        e.preventDefault();
+        this.props.openModal('create_job');
     }
 
     onSortByDateButtonClick() {
@@ -24,14 +30,14 @@ class LandingColumn extends React.Component {
     }
 
     render() {
+        const color = { "Wishlist": "#4285f4", "Applied": "#db4437", "Interview": "#f4b400", "Decision": "#25b871" };
+        const date = { "Wishlist": "application deadline", "Applied": "applied date", "Interview": "upcoming interview", "Decision": "date" };   
         const { title, jobs } = this.props;
         return (
         <div className="landing-column">
-            <div className="landing-column-title">{title}</div>
+            <div className="landing-column-title" style={{ backgroundColor: color[title] }}>{title}</div>
             <div className="landing-column-subtitle">{`${jobs.length} JOBS`}</div>
-            <button className="landing-add-job-block" onClick = {this.onSortByDateButtonClick} >
-                { this.state.isSortedByDate ?  "Sort by Default" : "Sort by Deadline" }
-            </button>
+                <p className="landing-column-sort" onClick={this.onSortByDateButtonClick}><i className="fas fa-sort"></i>{this.state.isSortedByDate ? "Sort by default" : "Sort by deadline"}</p>
             { (this.state.isSortedByDate ? 
                 [...jobs].sort((a,b) => (a.deadline > b.deadline ) ? 1 : -1) : jobs)
                 .map(job => this.renderLandingCompanyContainer(job))}
