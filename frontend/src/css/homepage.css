@@ -92,7 +92,7 @@ li{
 
 
 .jobyssey-home-img{
-    width: 1000px;
+    width: 700px;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -166,4 +166,13 @@ li{
     height: 20px;
     object-fit: cover;
     object-position: center;
+}
+
+.jobyssey-task-img{
+    width: 500px;
+    height: auto;
+}
+
+.jobyssey-task-text{
+    width: 500px;
 }
