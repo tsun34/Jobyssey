@@ -6,8 +6,4 @@ export const getCompanyReviews = companyId => {
 
 export const createReview = data => {
   return axios.post(`/api/reviews/${data.companyId}`, data);
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> review page complete
