@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewPage from './review_page';
-import { fetchCompanyReviews } from '../../actions/review_actions';
+import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
 
 const mstp = ({reviews, companies}) => {
@@ -13,6 +13,7 @@ const mstp = ({reviews, companies}) => {
 const mdtp = dispatch => {
     return {
         fetchCompanyReviews: companyId => dispatch(fetchCompanyReviews(companyId)),
+        postReview: data => dispatch(postReview(data)),
         fetchCompany: companyId => dispatch(fetchCompany(companyId)),
     };
 };
