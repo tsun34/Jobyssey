@@ -23,9 +23,34 @@
 .review-company-reviews {
     width: 50%;
     margin: auto;
+    align-items: flex-end;
+}
+
+.review-title {
+    width: 100%;
+    border-bottom: 1px solid #ece9f2;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-input {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.review-leave-button {
+    border-radius: 4px;
+    background-color:lightcyan;
+    color: blue;
+    border: 6px;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
 }
 
 .review-row {
+    width: 100%;
     border-bottom: 1px solid #ece9f2;
     padding-bottom: .5rem;
     margin-bottom: 1rem;

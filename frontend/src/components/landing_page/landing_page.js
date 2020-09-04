@@ -13,19 +13,7 @@ class LandingPage extends React.Component {
   }
 
   getJobsByStage(stage) {
-    return Object.values(this.props.jobs.user || {}).filter(job => job.stage === stage)
-  }
-
-  componentDidUpdate(prevProps, _prevState, _snapshot) {
-    const prevJobs = prevProps.jobs.user ?? [];
-    const jobs = this.props.jobs.user ?? []; 
-    if (jobs.length != prevJobs.length) {
-      this.props.fetchUserJobs(this.props.currentUserId);
-    }
-  }
-
-  componentDidMount() {
-    this.props.fetchUserJobs(this.props.currentUserId);
+    return Object.values(this.props.jobs.user ?? []).filter(job => job.stage === stage)
   }
 
   componentDidUpdate(prevProps, _prevState, _snapshot) {
@@ -37,7 +25,6 @@ class LandingPage extends React.Component {
   }
 
   render() {
-    const jobs = this.props.jobs.user ?? [];
     return (
       <div className="landing-wrapper">
         <GreetingContainer />
