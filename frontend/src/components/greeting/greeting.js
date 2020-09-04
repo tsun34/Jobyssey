@@ -29,10 +29,19 @@ class Greeting extends React.Component {
         
         let download;
         if (window.location.href.split('/')[4] === "home") {
+            let data =  this.props.jobs
+            let heads =  [
+                { label: "company", key: "company_name" },
+                { label: "postistion", key: "position_name" },
+                { label: "stage", key: "stage" },
+                { label: "application", key: "application_link" },
+                { label: "deadline", key: "deadline" }
+               ];
+            console.log(data)
             download = <CSVLink
                 className="greeting-button"
-                data={this.props.jobs}
-                // headers={}
+                headers = {heads}
+                data={data}
                 filename={'demoJobApps.csv'}
                 target='_self'
             >
