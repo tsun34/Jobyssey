@@ -92,7 +92,7 @@ class LandingCreateJob extends React.Component {
                             <div className="landing-menu-row" onClick={e => this.setState({category: 'wishlist'})}>Wishlist</div>
                             <div className="landing-menu-row" onClick={e => this.setState({category: 'applied'})}>Applied</div>
                             <div className="landing-menu-row" onClick={e => this.setState({category: 'interviewing'})}>Interview</div>
-                            <div className="landing-menu-row" onClick={e => this.setState({category: 'decision'})}>Offer</div>
+                            <div className="landing-menu-row" onClick={e => this.setState({category: 'decision'})}>Decision</div>
                         </div>
                     </div>
                     <button className="sign-button" onClick={this.onSubmitClick} type="submit">Create Job</button>

@@ -14,22 +14,16 @@ class LandingPage extends React.Component {
 
   getJobsByStage(stage) {
     return Object.values(this.props.jobs.user ?? []).filter(job => job.stage === stage)
-<<<<<<< HEAD
-=======
   }
 
-<<<<<<< HEAD
   componentDidUpdate(prevProps, _prevState, _snapshot) {
     const prevJobs = prevProps.jobs.user ?? [];
     const jobs = this.props.jobs.user ?? []; 
     if (jobs.length != prevJobs.length) {
       this.props.fetchUserJobs(this.props.currentUserId);
     }
->>>>>>> review page complete
   }
 
-=======
->>>>>>> review page everything
   render() {
     return (
       <div className="landing-wrapper">
