@@ -41,7 +41,10 @@ class LandingCreateJob extends React.Component {
             position_name: position,
             stage: category,
             application_link: applicationLink,
-        }).then(() => this.props.closeModal());
+        }).then(() => {
+            this.props.fetchUserJobs(this.props.currentUserId);
+            this.props.closeModal();
+        });
     }
 
     render() {

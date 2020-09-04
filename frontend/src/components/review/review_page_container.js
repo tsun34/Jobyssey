@@ -3,10 +3,11 @@ import ReviewPage from './review_page';
 import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
 
-const mstp = ({reviews, companies}) => {
+const mstp = ({reviews, companies, session}) => {
     return {
         reviews: Object.values(reviews.all) ?? [],
         company: companies.show,
+        currentUserId: session.user.id,
     };
 };
 
