@@ -28,6 +28,10 @@
     word-wrap: break-word;
 }
 
+input.li-field{
+    border: none;
+}
+
 .li-field:hover{
     overflow: visible;
 }
@@ -41,12 +45,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+}
 
+textarea.li-textfield{
+    border: none;
 }
 
 .li-textfield:hover{
     overflow: visible;
 }
+
 
 .job-index{
     display: flex;
@@ -81,4 +89,22 @@
     height: auto;
     font-family: sans-serif;
     font-size: 14px;
+}
+
+.li-links{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.li-button{
+    margin: 0 5px;
+    width: auto;
+    padding: 15px 20px;
+    background-color: #eb7f6b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

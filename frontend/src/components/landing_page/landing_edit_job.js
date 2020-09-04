@@ -3,30 +3,31 @@ import '../../css/landing-page.css';
 import '../../css/sign_up_log_in.css';
 import '../../css/create_job.css';
 
-class LandingCreateJob extends React.Component {
+class LandingEditJob extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            companyName: '',
-            position: '',
-            stage: '',
-            applicationLink: '',
-            // salary: '',
-            // location: '',
-            // deadline: '',
-            // dateApplied: '',
-            // interviewDate: '',
-            // decisionDate: '',
-            // decision: '',
-            // notes: '',
-            // networkContacts: '',
-            // studyPrep: ''
+            _id: this.props.currentJob._id, 
+            companyName: this.props.currentJob.company_name,
+            position: this.props.currentJob.position_name,
+            stage: this.props.currentJob.stage,
+            applicationLink: this.props.currentJob.application_link,
+            salary: this.props.currentJob.salary,
+            location: this.props.currentJob.location,
+            deadline: this.props.currentJob.deadline,
+            dateApplied: this.props.currentJob.dateApplied,
+            interviewDate: this.props.currentJob.interviewDate,
+            decisionDate: this.props.currentJob.decisionDate,
+            decision: this.props.currentJob.decision,
+            notes: this.props.currentJob.notes,
+            networkContacts: this.props.currentJob.networkContacts,
+            studyPrep: this.props.currentJob.studyPrep
         };
         this.onSubmitClick = this.onSubmitClick.bind(this);
         this.onChangeUpdate = this.onChangeUpdate.bind(this);
     }
 
-    onChangeUpdate(field){
+    onChangeUpdate(field) {
         return e => {
             this.setState({
                 [field]: e.currentTarget.value
@@ -36,8 +37,9 @@ class LandingCreateJob extends React.Component {
 
     onSubmitClick(e) {
         e.preventDefault();
-        const { companyName, position, stage, applicationLink, salary, location, deadline, dateApplied, interviewDate, decisionDate, decision, notes, networkContacts, studyPrep } = this.state;
-        this.props.composeJob({
+        const { _id, companyName, position, stage, applicationLink, salary, location, deadline, dateApplied, interviewDate, decisionDate, decision, notes, networkContacts, studyPrep } = this.state;
+        this.props.editUserJob({
+            _id,
             company_name: companyName,
             position_name: position,
             stage: stage,
@@ -91,8 +93,8 @@ class LandingCreateJob extends React.Component {
                             <div className="landing-menu-container li-field">
                                 <input
                                     className="li-field-dropdown"
-                                    onChange={this.onChangeUpdate('stage')}
                                     placeholder="Stage *"
+                                    onChange={this.onChangeUpdate('stage')}
                                     type="text"
                                     value={stage}
                                     required
@@ -113,7 +115,7 @@ class LandingCreateJob extends React.Component {
                                 placeholder="Application Link *"
                                 type="text"
                                 value={applicationLink}
-                                
+                                required
                             />
                         </li>
                         <li className='li-details'>
@@ -236,12 +238,11 @@ class LandingCreateJob extends React.Component {
                         </textarea>
                     </li>
                 </ul>
-                <button className="sign-button" type="submit" onClick={this.onSubmitClick}>Create Job</button>
+                <button className="sign-button" onClick={this.onSubmitClick} type="submit">Update Job</button>
             </form>
-
 
         );
     }
 }
 
-export default LandingCreateJob;
+export default LandingEditJob;

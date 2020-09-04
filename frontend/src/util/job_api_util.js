@@ -11,3 +11,7 @@ export const createJob = data => {
 export const deleteJob = id => {
   return axios.delete( `/api/jobs/${id}`)
 }
+
+export const editJob = job => {
+  return axios.post(`/api/jobs/update/${job._id}`, job)
+}
