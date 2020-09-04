@@ -1,8 +1,9 @@
-import { getUserJobs, createJob } from '../util/job_api_util';
+import { getUserJobs, createJob, deleteJob } from '../util/job_api_util';
 
 // export const RECEIVE_JOBS = "RECEIVE_JOBS";
 export const RECEIVE_USER_JOBS = "RECEIVE_USER_JOBS";
 export const RECEIVE_NEW_JOB = "RECEIVE_NEW_JOB";
+export const REMOVE_JOB = 'REMOVE_JOB'
 
 // export const receiveJobs = jobs => ({
 //   type: RECEIVE_JOBS,
@@ -19,11 +20,10 @@ export const receiveNewJob = job => ({
   job
 })
 
-// export const fetchJobs = () => dispatch => (
-//   getJobs()
-//     .then(jobs => dispatch(receiveJobs(jobs)))
-//     .catch(err => console.log(err))
-// );
+export const removeJob = job => ({
+  type: REMOVE_JOB,
+  job
+})
 
 export const fetchUserJobs = id => dispatch => (
   getUserJobs(id)
@@ -36,3 +36,9 @@ export const composeJob = data => dispatch => (
     .then(job => dispatch(receiveNewJob(job)))
     .catch(err => console.log(err))
 );
+
+export const removeUserJob = job => dispatch => (
+  deleteJob(job)
+    .then(() => dispatch(removeJob(job)))
+    .catch(err => console.log(err))
+)
