@@ -6,12 +6,4 @@ export const getCompanyReviews = companyId => {
 
 export const createReview = data => {
   return axios.post(`/api/reviews/${data.companyId}`, data);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> review page complete
-=======
 };
->>>>>>> review page initial layout

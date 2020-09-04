@@ -35,6 +35,9 @@
     width: 40%;
     margin: auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> review page complete
     align-items: flex-end;
 }
 
@@ -59,6 +62,7 @@
     padding: 6px;
     border: none;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -72,6 +76,12 @@
 
 .review-row {
 >>>>>>> review page initial layout
+=======
+}
+
+.review-row {
+    width: 100%;
+>>>>>>> review page complete
     border-bottom: 1px solid #ece9f2;
     padding-bottom: 1rem;
     font-size: 24px;
