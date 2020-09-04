@@ -41,7 +41,10 @@ class LandingCreateJob extends React.Component {
             position_name: position,
             stage: category,
             application_link: applicationLink,
-        }).then(() => this.props.closeModal());
+        }).then(() => {
+            this.props.fetchUserJobs(this.props.currentUserId);
+            this.props.closeModal();
+        });
     }
 
     render() {
@@ -88,8 +91,8 @@ class LandingCreateJob extends React.Component {
                         <div className="landing-menu-dropdown">
                             <div className="landing-menu-row" onClick={e => this.setState({category: 'wishlist'})}>Wishlist</div>
                             <div className="landing-menu-row" onClick={e => this.setState({category: 'applied'})}>Applied</div>
-                            <div className="landing-menu-row" onClick={e => this.setState({category: 'interview'})}>Interview</div>
-                            <div className="landing-menu-row" onClick={e => this.setState({category: 'offer'})}>Offer</div>
+                            <div className="landing-menu-row" onClick={e => this.setState({category: 'interviewing'})}>Interview</div>
+                            <div className="landing-menu-row" onClick={e => this.setState({category: 'decision'})}>Decision</div>
                         </div>
                     </div>
                     <button className="sign-button" onClick={this.onSubmitClick} type="submit">Create Job</button>

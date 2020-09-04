@@ -12,6 +12,7 @@ import SearchPage from "./components/search_test/search";
 
 import HomePageContainer from './components/homePage/home_page_container';
 import VizContainer from './components/progress/vizgraph_container';
+import ReviewPageContainer from './components/review/review_page_container';
 
 const App = () => (
   <div className='slant-display'>
@@ -20,7 +21,8 @@ const App = () => (
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exact path="/home" component={LandingPageContainer} />
       <ProtectedRoute exact path="/myprogress" component={VizContainer} />
-      <Route exach path="/explore" component={ExplorePage} />
+      <ProtectedRoute exach path="/explore" component={ExplorePage} />
+      <ProtectedRoute exach path="/reviews/:companyId" component={ReviewPageContainer} />
     </Switch>
     <ModalContainer />
   </div>
