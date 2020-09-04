@@ -1,6 +1,8 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import '../../css/review-page.css';
+import { getRandomBackgroundColor } from '../../util/general_util';
+import { Link } from 'react-router-dom';
 
 class ReviewPage extends React.Component {
   constructor(props) {
@@ -28,6 +30,14 @@ class ReviewPage extends React.Component {
 
   onSubmitClick(e) {
     e.preventDefault();
+    this.props.postReview({
+      companyId: this.props.match.params.companyId,
+      body: this.state.review,
+      user: this.props.currentUserId,
+    }).then(() => {
+      this.props.fetchCompanyReviews(this.props.match.params.companyId);
+      this.setState({openReviewInput: false})
+    });
   }
 
   onCancelClick(e) {
@@ -46,29 +56,35 @@ class ReviewPage extends React.Component {
     return (
       <div className="review-wrapper">
         <GreetingContainer />
-        <div className="review-company-name">{company.name}</div>
-        <div className="review-company-description">{company.description}</div>
+        <div style={{backgroundColor: getRandomBackgroundColor()}} className="review-company-name">{company.name}</div>
         <div className="review-company-reviews">
-            <div className="review-title">{reviews.length > 0 ? `What ${reviews.length} reviews are saying` : 'No reviews for this company'}</div>
-            <div className="review-input">
+            <div className="review-input-wrapper">
               {
                 this.state.openReviewInput ? 
-                  <div>
-                    <textarea className="leave-reivew-input-text-area" onChange={this.onReviewChange} placeholder={`How's your experience interviewing on ${company.name}?`} />
-                    <button className="review-submit-button" onClick={this.onSubmitClick}>Submit anonymously</button>
-                    <span className="review-cancel-button" onClick={this.onCancelClick}>Cancel</span>
-                  </div> : 
-                  <button className="review-leave-button" onClick={this.onLeaveReviewClick}>Leave a anonymous review</button>
+                  <div className="review-input">
+                    <div className="leave-reivew-input-text-area-div">
+                      <textarea className="leave-reivew-input-text-area" onChange={this.onReviewChange} placeholder={`How's your experience interviewing on ${company.name}?`} />
+                    </div>
+                    <div className="review-buttons-wrapper">
+                      <button className="review-leave-button" onClick={this.onSubmitClick}>Submit</button>
+                      <div className="review-cancel-button" onClick={this.onCancelClick}>Cancel</div>
+                    </div>
+                  </div> :
+                  <div className="review-back-and-leave-wrapper">
+                    <Link to="/explore/"><div>Back to Explore</div></Link>
+                    <button className="review-leave-button" onClick={this.onLeaveReviewClick}>Leave review</button>
+                  </div>
               }
             </div>
             {
-                reviews.map(review =>
+                reviews.map(
+                  review =>
                     <div className="review-row" key={review._id}>
-                      {review.body}
-                      <div>{`Review created on ${review.created_on}`}</div>
+                      <div>{review.body}</div>
                     </div>
                 )
             }
+            {reviews.length > 0 && <Link to="/explore/"><div className="review-back-to-explore-bottom">Back to Explore</div></Link>}
         </div>
       </div>
     );
