@@ -61,7 +61,7 @@ class Greeting extends React.Component {
                     <Link to="/" className="greeting-button">Home</Link>
                     <Link to="/explore" className="greeting-button">Explore</Link>
                     <Link to="/myprogress" className="greeting-button">My Progress</Link>
-                    {console.log(window.location.pathname)}
+                    
                     {download}
 
                 </div>
