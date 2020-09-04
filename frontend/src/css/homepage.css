@@ -82,6 +82,7 @@ li{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    padding-left: 20px;
 }
 
 .jobyssey-intro > div{
@@ -106,7 +107,7 @@ li{
     text-align: center;
     margin-bottom: 16px;
     margin-right: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .jobyssey-home-body{
@@ -129,6 +130,10 @@ li{
     color: #485d69;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.jobyssey-home-note-link:hover{
+    color: gray;
 }
 
 .footer{

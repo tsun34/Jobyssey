@@ -12,6 +12,7 @@ class HomePage extends React.Component {
         super(props);
         this.onLogInClick = this.onLogInClick.bind(this);
         this.onSignUpClick = this.onSignUpClick.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     onLogInClick() {
@@ -24,6 +25,12 @@ class HomePage extends React.Component {
 
     onBackToTopClick() {
         window.scrollTo(0, 0)
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        const demoUser = { email: 'demoUser@gmail.com', password: 'demoUser' };
+        this.props.login(demoUser);
     }
 
 
@@ -45,9 +52,10 @@ class HomePage extends React.Component {
 
         <section className='jobyssey-home-section'>
             <div>
-                <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goal</h1>
+                <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goals</h1>
                 <span className='jobyssey-home-body'>Stay on track</span>
                 <p className='jobyssey-home-note' >Need to create an account? <span onClick={this.onSignUpClick} className='jobyssey-home-note-link'> Get started</span></p>
+                <p className="jobyssey-home-note-link" onClick={this.handleDemo}>Try with Demo Login</p>
             </div>
             <img className='jobyssey-home-img' src={test1} alt='jobyssey homepage'/>
         </section>  
