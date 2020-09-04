@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import LandingCreateJob from './landing_create_job';
-import { composeJob } from '../../actions/job_actions';
+import { composeJob, fetchUserJobs } from '../../actions/job_actions';
 import { closeModal } from '../../actions/modal_actions';
-import { fetchUserJobs } from '../../actions/job_actions';  
 
 const mstp = ({session}) => {
     return {

@@ -12,7 +12,7 @@ class LandingCompany extends React.Component {
     }
 
     render() {
-        const { job, backgroundColor } = this.props;
+        const { job } = this.props;
         return (
             <div className="landing-company-row" onClick={() => this.onIndexClick(job)} >
                 <div>

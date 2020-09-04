@@ -4,12 +4,16 @@ import '../../css/job_index_item.css'
 class JobIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        this.onClick = this.onClick.bind(this)
+        this.onClick = this.onClick.bind(this);
+        this.onClickEdit = this.onClickEdit.bind(this);
     }
 
     onClick() {
-        console.log(this.props)
         this.props.removeUserJob(this.props.job._id).then(this.props.closeModal())
+    }
+
+    onClickEdit(currentJob){
+        this.props.openModalWithProps('edit_job', currentJob);
     }
 
     render() {
@@ -17,7 +21,7 @@ class JobIndexItem extends React.Component {
         return (
             <div className='job-index'>
                 <div className='job-index-top'>
-                    <button onClick={this.onClick}>Delete Job</button>
+                    
                     <ul className='job-index-top-left'>
                         <li className='li-details'>
                             <p className='li-title'>Company Name:</p>
@@ -85,7 +89,10 @@ class JobIndexItem extends React.Component {
                         <div className='li-textfield'>{job.studying_preparation}</div>
                     </li>
                 </ul>
-
+                <div className='li-links'>
+                    <button className='li-button' onClick={() => this.onClickEdit(job)}>Edit Application</button>
+                    <button className="li-button" onClick={this.onClick}>Delete Application</button>
+                </div>
             </div>
         )
     }

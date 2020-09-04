@@ -53,7 +53,10 @@ router.post('/',
             studying_preparation: req.body.studying_preparation
         });
 
-        newJob.save().then(job => res.json(job));
+        newJob.save().then(job => res.json(job)).catch(err => {
+            console.log(err);
+            res.status(500);
+        });
     }    
 );
 

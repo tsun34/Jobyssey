@@ -46,7 +46,7 @@ class Greeting extends React.Component {
                     <Link to="/myprogress" className="greeting-button">My Progress</Link>
                     <Link to="/" className="greeting-button">Export Data</Link>
                 </div>
-                <button className="greeting-create-job" onClick={this.onCreateJobClick}><i class="fas fa-plus"> </i> Create Job</button>
+                <button className="greeting-create-job" onClick={this.onCreateJobClick}><i className="fas fa-plus"> </i> Create Job</button>
             </div>
         </div>
         );
