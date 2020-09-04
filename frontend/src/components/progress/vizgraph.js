@@ -24,8 +24,9 @@ class VizSanChart extends React.Component {
     return (
         <div>
             <GreetingContainer />
-            <div className={"my-pretty-chart-container"}>
+            <div className="viz-container">
                 <Chart
+                className='viz-graph'
                 width={1000}
                 height={"750px"}
                 chartType="Sankey"

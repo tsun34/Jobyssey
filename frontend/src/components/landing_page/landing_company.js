@@ -14,11 +14,12 @@ class LandingCompany extends React.Component {
     render() {
         const { job, backgroundColor } = this.props;
         return (
-            <div className="landing-company-row" onClick={() => this.onIndexClick(job)} style={{ backgroundColor }}>
-                <div className="landing-company-row-details">
+            <div className="landing-company-row" onClick={() => this.onIndexClick(job)} >
+                <div>
                     <div className="landing-company-row-title">{job.position_name}</div>
                     <div className="landing-company-row-subtitle">{job.company_name}</div>
                 </div>
+                <i className="fas fa-angle-double-right"></i>
             </div>
         );
     }
