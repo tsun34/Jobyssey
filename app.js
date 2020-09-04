@@ -7,7 +7,8 @@ const companies = require('./routes/api/companies');
 const reviews = require('./routes/api/reviews');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-
+// const seedC = require('./seed/company-seed');
+// const seedJ= require('./seed/seed');
 const app = express();
 
 const path = require('path');
@@ -17,7 +18,9 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
     })
 }
-
+// run seed functions here once
+// seedC();
+// seedJ();
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
