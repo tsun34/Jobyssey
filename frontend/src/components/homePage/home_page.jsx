@@ -22,6 +22,11 @@ class HomePage extends React.Component {
         this.props.openModal('sign_up');
     }
 
+    onBackToTopClick() {
+        window.scrollTo(0, 0)
+    }
+
+
     render() {
     return <div>
         <nav className='home-nav'>
@@ -42,13 +47,13 @@ class HomePage extends React.Component {
             <div>
                 <h1 className='jobyssey-home-title'>Jobyssey helps you to presue your goal</h1>
                 <span className='jobyssey-home-body'>Stay on track</span>
-                <p className='jobyssey-home-note'>Need to create an account? <Link to="/login" className='slant-home-note-link'> Get started</Link></p>
+                <p className='jobyssey-home-note' >Need to create an account? <span onClick={this.onSignUpClick} className='jobyssey-home-note-link'> Get started</span></p>
             </div>
             <img className='jobyssey-home-img' src={test1} alt='jobyssey homepage'/>
         </section>  
 
         <section className='personal-task-section'>
-            <div>
+            <div className='jobyssey-home-box'>
                 <img className='jobyssey-task-img' src={personal_job_task} alt='jobyssey homepage' />
                 <span className='jobyssey-task-text'>
                     <h1>Stay organized</h1>
@@ -59,21 +64,21 @@ class HomePage extends React.Component {
             </div>
         </section>
         <section className='personal-task-section'>
-            <div>
-                <span className='jobyssey-task-text'>
+            <div className='jobyssey-home-box'>
+                <span className='visual-task-text'>
                     <h1>Visual your success</h1>
                     <span className='jobyssey-task-note'>
                         Jobyseey incorporates the d3-sankey library and generates personalized sankey diagrams to easily visualize the progress of job searching you have accomplished. 
                     </span>
                 </span>
-                <img className='jobyssey-task-img' src={visual} alt='jobyssey homepage' />
+                <img className='jobyssey-visual-img' src={visual} alt='jobyssey homepage' />
             </div>
         </section>
         <section className='personal-task-section'>
-            <div>
+            <div className='jobyssey-home-box'>
                 <img className='jobyssey-task-img' src={explore} alt='jobyssey homepage' />
                 <span className='jobyssey-task-text'>
-                    <h1>Share your experience</h1>
+                    <h1>Explore & Share</h1>
                     <span className='jobyssey-task-note'>
                         Jobyssey is a safe place for job seekers to share their interviewing experiences. Users can search and view other job seekers’ experience at different companies.
                     </span>
@@ -81,14 +86,16 @@ class HomePage extends React.Component {
             </div>
         </section>
         <div className='footer'>
-                <Link to='/'> <img className='footer-logo' src={logo} alt="logo" /></Link>
-            <div className='footer-content'>
-                <p>About</p>
-                <p>Privacy & Terms</p>
-                <p>Question?</p>
-                <p>Manage your account and privacy</p>
+            <div className='footer-content' >
+                <span>About</span>
+                <span>Privacy & Terms</span>
+                <span>Question?</span>
+                <span>Manage your account and privacy</span>
             </div>
-
+            <Link to='/'> <img className='footer-logo' src={logo} alt="logo" /></Link>
+            <div>
+                <button className='back-to-top-btn' onClick={this.onBackToTopClick}> Back To Top</button>
+            </div>
         </div>
     </div>
     }
