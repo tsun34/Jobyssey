@@ -1,6 +1,7 @@
 import React from "react";
 import GreetingContainer from "../greeting/greeting_container";
 import { Chart } from "react-google-charts";
+import '../../css/viz.css';
 
 class VizSanChart extends React.Component {
 
@@ -39,8 +40,8 @@ class VizSanChart extends React.Component {
             <div className="viz-container">
                 <Chart
                 className='viz-graph'
-                width={1000}
-                height={"750px"}
+                width={"1000px"}
+                height={"600px"}
                 chartType="Sankey"
                 loader={<div>Loading Chart</div>}
                 options={{
@@ -48,11 +49,11 @@ class VizSanChart extends React.Component {
                         node: {
                             label: {
                                 // fontName: 'San',
-                                fontSize: 22,
+                                fontSize: 20,
                                 bold: true,
-                                labelPadding: 50
+                                labelPadding: 5
                             },
-                            nodePadding: 20,
+                            nodePadding: 0,
                             width: 20
                         },
                         link: {
@@ -62,7 +63,7 @@ class VizSanChart extends React.Component {
                     }
                 }}
                 data={[
-                    ["From", "To", "Weight"],
+                    ["From", "To", "# of Applications"],
                     ["Total Applications", "Wishlist", sumJobs],
                     ["Wishlist", "Applied", appliedJobs],
                     ["Wishlist", " ", inprogressJobs],
