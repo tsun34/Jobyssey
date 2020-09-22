@@ -3,13 +3,25 @@ import GreetingContainer from "../greeting/greeting_container";
 import { Chart } from "react-google-charts";
 
 class VizSanChart extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchUserJobs(this.props.currentUserId)
+    }
+
+    getJobsByStage(stage) {
+        return Object.values(this.props.jobs.user ?? []).filter(job => job?.stage === stage)
+    }
+
+
   render() {
-    const wishlistJobs = 100;
-    const appliedJobs = 80;
+    const wishlistJobs = this.getJobsByStage("wishlist").length;
+    const appliedJobs = this.getJobsByStage("applied").length;
     const inprogressJobs = wishlistJobs - appliedJobs;
-    const interviewingJobs = 50;
-    const offerJobs = 10;
-    const rejectJobs = 20;
+    const interviewingJobs = this.getJobsByStage("interviewing").length;
+    const offerJobs = this.getJobsByStage("decision").length;
+    const rejectJobs = interviewingJobs - offerJobs;
+    const sumJobs = wishlistJobs + appliedJobs + interviewingJobs + offerJobs;
+
 
     const colors = [
        "#a6cee3",
@@ -51,6 +63,7 @@ class VizSanChart extends React.Component {
                 }}
                 data={[
                     ["From", "To", "Weight"],
+                    ["Total Applications", "Wishlist", sumJobs],
                     ["Wishlist", "Applied", appliedJobs],
                     ["Wishlist", " ", inprogressJobs],
                     ["Applied", "Interviewing", interviewingJobs],
