@@ -5,7 +5,6 @@ import { openModal, openModalWithProps } from '../../actions/modal_actions';
 import {fetchUserJobs} from '../../actions/job_actions'
 
 const mstp = (state) => {
-    // console.log(state)
     return {
         // jobs: state.entities.jobs,
         // currentUserId: state.entities.user.id

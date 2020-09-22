@@ -21,9 +21,11 @@ class LandingCreateJob extends React.Component {
             // notes: '',
             // networkContacts: '',
             // studyPrep: ''
+            errors: {}
         };
         this.onSubmitClick = this.onSubmitClick.bind(this);
         this.onChangeUpdate = this.onChangeUpdate.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     onChangeUpdate(field){
@@ -58,10 +60,26 @@ class LandingCreateJob extends React.Component {
         });
     }
 
+    renderErrors() {
+        return (
+            <ul className="login-errors">
+                {Object.keys(this.state.errors).map((error, i) => (
+                    <li key={`error-${i}`}>{this.state.errors[error]}</li>
+                ))}
+            </ul>
+        )
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({ errors: nextProps.errors })
+    }
+
     render() {
         const { companyName, position, stage, applicationLink, salary, location, deadline, dateApplied, interviewDate, decisionDate, decision, notes, networkContacts, studyPrep } = this.state;
         return (
             <form className='job-index'>
+                {Object.keys(this.state.errors).length > 0 ? this.renderErrors() : null}
+
                 <div className='job-index-top'>
                     <ul className='job-index-top-left'>
                         <li className='li-details'>

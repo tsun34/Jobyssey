@@ -37,7 +37,6 @@ class Greeting extends React.Component {
                 { label: "application", key: "application_link" },
                 { label: "deadline", key: "deadline" }
                ];
-            console.log(data)
             download = <CSVLink
                 className="greeting-button"
                 headers = {heads}

@@ -28,7 +28,6 @@ class ExploreCompanyList extends React.Component {
             return <Redirect to={redirectUrl}/>;
         }
         const companies = this.props.companies ?? [];
-        console.log(companies)
         return (
             <div className="explore-company-container">
                 {
