@@ -33,7 +33,10 @@ class SignIn extends React.Component {
             password: this.state.password
         };
         this.props.login(user);
-        this.props.closeModal();
+        if (!this.state.errors){
+            this.props.closeModal();
+
+        }
     }
 
     handleDemo(e) {
@@ -45,13 +48,14 @@ class SignIn extends React.Component {
 
     renderErrors() {
         return(
-            <ul>
+            <ul className="login-errors">
                 {Object.keys(this.state.errors).map((error, i) => (
                     <li key={`error-${i}`}>{this.state.errors[error]}</li>
                 ))}
             </ul>
         )
     }
+
 
     componentWillReceiveProps(nextProps) {
         this.setState({errors: nextProps.errors})
@@ -79,7 +83,7 @@ class SignIn extends React.Component {
                     <button className="sign-button" onClick={this.handleDemo}>Demo Login</button>
                     <br />
                     <span>Don't have an account? <a href=""  onClick={e => this.onSignupClick(e)}>Sign up</a></span>
-                    {this.renderErrors()}
+                    {Object.keys(this.state.errors).length > 0? this.renderErrors() : null}
                 </form>
                 {/* <button onClick={this.handleDemo}>Continue as Demo User</button> */}
             </div>

@@ -37,3 +37,8 @@
     margin-bottom: 8px;
     cursor: pointer;
 }
+
+.login-errors{
+    border: 1px solid crimson;
+    padding: 5px 10px;
+}
