@@ -14,6 +14,7 @@ class SignUp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
         this.switchModal = this.switchModal.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     
@@ -38,12 +39,14 @@ class SignUp extends React.Component {
             password2: this.state.password2
         }
         this.props.signup(user);
-        this.props.closeModal();
+        // if (Object.keys(this.state.errors).length === 0){
+        //     this.props.closeModal();
+        // }
     }
 
     renderErrors() {
         return (
-            <ul>
+            <ul className='login-errors'>
                 {Object.keys(this.state.errors).map((error, i) => (
                     <li key={`error-${i}`}>{this.state.errors[error]}</li>
                 ))}
@@ -53,6 +56,11 @@ class SignUp extends React.Component {
 
     componentDidMount() {
         this.props.receiveErrors([])
+    }
+
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({ errors: nextProps.errors })
     }
 
     render() {
@@ -98,7 +106,8 @@ class SignUp extends React.Component {
                     <button className="sign-button">Sign up</button>
                     <br />
                     <span>Already have an account? <a href="" onClick={this.switchModal}>Log in</a></span>
-                    {this.renderErrors()}
+                    {Object.keys(this.state.errors).length > 0 ? this.renderErrors() : null}
+
                 </form>
             </div>
         );

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import LandingPage from './landing_page';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 import { fetchUserJobs } from '../../actions/job_actions';  
 
 const mstp = ({session, jobs}) => {
@@ -13,6 +13,7 @@ const mstp = ({session, jobs}) => {
 const mdtp = dispatch => {
     return {
         openModal: modal => dispatch(openModal(modal)),
+        closeModal: () => dispatch(closeModal()),
         fetchUserJobs: userId => dispatch(fetchUserJobs(userId)),
     };
 };

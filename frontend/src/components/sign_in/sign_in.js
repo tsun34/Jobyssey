@@ -33,10 +33,10 @@ class SignIn extends React.Component {
             password: this.state.password
         };
         this.props.login(user);
-        if (!this.state.errors){
-            this.props.closeModal();
+        // if (!this.state.errors){
+        //     this.props.closeModal();
 
-        }
+        // }
     }
 
     handleDemo(e) {

@@ -9,6 +9,7 @@ class LandingPage extends React.Component {
   }
 
   componentDidMount() {
+    this.props.closeModal();
     this.props.fetchUserJobs(this.props.currentUserId)
   }
 
