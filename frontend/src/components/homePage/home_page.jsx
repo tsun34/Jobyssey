@@ -121,7 +121,7 @@ class HomePage extends React.Component {
         <section className='contact-us'>
             <a href="https://github.com/tsun34"> <i className='fab fa-github'></i> Charlotte Sun</a>
             <a href="https://github.com/maggieyao1211"> <i className='fab fa-github'></i> Maggie Yao</a>
-            <a href="https://github.com/xiaoyu322"> <i className='fab fa-github'></i> Phillip Tynan</a>
+            <a href="https://github.com/xiaoyu322"> <i className='fab fa-github'></i> Philip Tynan</a>
             <a href="https://github.com/tynan415"> <i className='fab fa-github'></i> Xiao Yu</a>
 
         </section>
