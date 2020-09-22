@@ -57,3 +57,7 @@
     color: white;
     margin-bottom: 2.5%;
 }
+
+.explore-company-card:hover{
+    opacity: 0.85;
+}
