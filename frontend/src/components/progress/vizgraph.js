@@ -24,6 +24,7 @@ class VizSanChart extends React.Component {
     const sumJobs = wishlistJobs + appliedJobs + interviewingJobs + offerJobs;
 
 
+
     const colors = [
        "#a6cee3",
        "#b2df8a",
@@ -53,7 +54,7 @@ class VizSanChart extends React.Component {
                                 bold: true,
                                 labelPadding: 5
                             },
-                            nodePadding: 0,
+                            nodePadding: 30,
                             width: 20
                         },
                         link: {
