@@ -6,6 +6,7 @@ import homeImg2 from "../../pics/2.png";
 import homeImg3 from "../../pics/3.png";
 import homeImg4 from "../../pics/4.png";
 import homeImg5 from "../../pics/5.png";
+import homeImg6 from "../../pics/6.png";
 
 import '../../css/homepage.css'
 
@@ -102,7 +103,7 @@ class HomePage extends React.Component {
         </section>
 
         <section className='personal-task-section'>
-            <img className='jobyssey-visual-img' src={homeImg5} alt='jobyssey homepage' />
+            <img className='jobyssey-task-img' src={homeImg6} alt='jobyssey homepage' />
             <span className='jobyssey-task-text'>
                 <h1>Explore and Share</h1>
                 <span>
