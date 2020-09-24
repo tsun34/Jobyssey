@@ -29,14 +29,14 @@ router.post('/:company_id',
 })
 
 // edit a review
-router.post('/edit/:id', 
+router.post('/update/:id', 
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
     Review.findById(req.params.id)
         .then(review => {
-            review.company = req.body.company_id;
+            review.company = req.body.company;
             review.body = req.body.body;
-            review.user = req.body.id;
+            review.user = req.body.user;
           
             review.save()
                 .then(() => res.json('Review updated!'))
