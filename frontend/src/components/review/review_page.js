@@ -15,6 +15,7 @@ class ReviewPage extends React.Component {
     this.onSubmitClick = this.onSubmitClick.bind(this);
     this.onCancelClick = this.onCancelClick.bind(this);
     this.onLeaveReviewClick = this.onLeaveReviewClick.bind(this);
+    this.onItemClick = this.onItemClick.bind(this);
   }
 
   componentDidMount() {
@@ -50,13 +51,19 @@ class ReviewPage extends React.Component {
     this.setState({openReviewInput: true});
   }
 
+  onItemClick(review) {
+    this.props.openModalWithProps('review_item', review);
+  }
+
   render() {
     const { company } = this.props;
     const reviews = this.props.reviews ?? [];
     return (
       <div className="review-wrapper">
         <GreetingContainer />
-        <div style={{backgroundColor: getRandomBackgroundColor()}} className="review-company-name">{company.name}</div>
+        <div style={{ backgroundColor: getRandomBackgroundColor() }} className="review-company-name"> 
+          <div>{company.name}</div>
+        </div>
         <div className="review-company-reviews">
             <div className="review-input-wrapper">
               {
@@ -76,15 +83,17 @@ class ReviewPage extends React.Component {
                   </div>
               }
             </div>
+          <div >
             {
                 reviews.map(
-                  review =>
-                    <div className="review-row" key={review._id}>
+                  (review, idx) =>
+                    <div className="review-row" key={idx} onClick={() => this.onItemClick(review)}>
                       <div>{review.body}</div>
                     </div>
                 )
             }
             {reviews.length > 0 && <Link to="/explore/"><div className="review-back-to-explore-bottom">Back to Explore</div></Link>}
+            </div>
         </div>
       </div>
     );
