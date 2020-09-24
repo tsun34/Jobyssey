@@ -15,17 +15,43 @@ router.get('/:company_id', (req, res) => {
 });
 
 // create a review 
-router.post('/:company_id', // what route to use here?
+router.post('/:company_id', 
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
         const newReview = new Review({
             company: req.params.company_id,
             body: req.body.body,
-            user: req.user.id // how to get user id here?
+            user: req.user.id 
         })        
         
         newReview.save().then(review => res.json(review));
 
+})
+
+// edit a review
+router.post('/update/:id', 
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+    Review.findById(req.params.id)
+        .then(review => {
+            review.company = req.body.company;
+            review.body = req.body.body;
+            review.user = req.body.user;
+          
+            review.save()
+                .then(() => res.json('Review updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
+        .catch(err => res.status(400).json('Error: '+ err));
+})
+
+//delete a review info (delete)
+router.delete('/:id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        Review.findByIdAndDelete(req.params.id)
+            .then(() => res.json('Review deleted.'))
+            .catch(err => res.status(400).json('Eror: '+err));
 })
 
 module.exports = router;
