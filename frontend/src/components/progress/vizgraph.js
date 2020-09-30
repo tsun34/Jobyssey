@@ -4,6 +4,10 @@ import { Chart } from "react-google-charts";
 import '../../css/viz.css';
 
 class VizSanChart extends React.Component {
+    // constructor(){
+        // {totalApp: 0, 
+        // }
+    // }
 
     componentDidMount() {
         this.props.fetchUserJobs(this.props.currentUserId)
@@ -17,10 +21,8 @@ class VizSanChart extends React.Component {
   render() {
     const wishlistJobs = this.getJobsByStage("wishlist").length;
     const appliedJobs = this.getJobsByStage("applied").length;
-    const inprogressJobs = wishlistJobs - appliedJobs;
     const interviewingJobs = this.getJobsByStage("interviewing").length;
     const offerJobs = this.getJobsByStage("decision").length;
-    const rejectJobs = interviewingJobs - offerJobs;
     const sumJobs = wishlistJobs + appliedJobs + interviewingJobs + offerJobs;
 
 
@@ -67,11 +69,11 @@ class VizSanChart extends React.Component {
                     ["From", "To", "# of Applications"],
                     ["Total Applications", "Wishlist", sumJobs],
                     ["Wishlist", "Applied", appliedJobs],
-                    ["Wishlist", " ", inprogressJobs],
+                    // ["Wishlist", " ", inprogressJobs],
                     ["Applied", "Interviewing", interviewingJobs],
-                    [" ", "Interviewing", 0],
-                    ["Interviewing", "Offer", offerJobs],
-                    ["Interviewing", "Rejection", rejectJobs]
+                    // [" ", "Interviewing", 0],
+                    ["Interviewing", "Decision", offerJobs],
+                    // ["Interviewing", "Rejection", rejectJobs]
                 ]}
                 rootProps={{ "data-testid": "1" }}
                 />
