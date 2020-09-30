@@ -4,7 +4,7 @@
 }
 
 .review-company-name {
-    width: 20%;
+    width: 50%;
     margin: auto;
     box-shadow: 3px 3px 3px #c7d0d8;
     border: 1px solid #9aa7b2;
@@ -55,6 +55,7 @@
     color: white;
     border: 6px;
     padding: 10px 12px;
+    margin-left: 20px; 
     border: none;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
@@ -68,6 +69,13 @@
     padding: 12px 24px;
     height: 6rem;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-row > span{
+    align-self: flex-end;
 }
 
 .leave-reivew-input-text-area-div {
@@ -76,9 +84,14 @@
     border: 1px solid #9aa7b2;
     height: 7rem;
     font-family: 'Raleway', sans-serif;
+    padding: 10px 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.leave-reivew-input-text-area-div > span{
+    align-self: flex-end;
 }
 
 .leave-reivew-input-text-area {
@@ -87,6 +100,7 @@
     border: none;
     outline: none;
     resize: none;
+
 }
 
 .review-cancel-button {

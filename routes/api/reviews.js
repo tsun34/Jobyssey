@@ -34,9 +34,7 @@ router.post('/update/:id',
     (req, res) => {
     Review.findById(req.params.id)
         .then(review => {
-            review.company = req.body.company;
             review.body = req.body.body;
-            review.user = req.body.user;
           
             review.save()
                 .then(() => res.json('Review updated!'))

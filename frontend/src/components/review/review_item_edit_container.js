@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import ReviewPage from './review_page';
+import ReviewItemEdit from './review_item_edit';
 import { fetchCompanyReviews, postReview, editUserReview, removeUserReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
-import { openModal, openModalWithProps } from '../../actions/modal_actions';
+import { openModal, closeModal, openModalWithProps } from '../../actions/modal_actions';
 
-const mstp = ({reviews, companies, session}) => {
+
+const mstp = ({ reviews, companies, session }) => {
     return {
         reviews: Object.values(reviews.all) ?? [],
         company: companies.show,
@@ -17,9 +18,12 @@ const mdtp = dispatch => {
         fetchCompanyReviews: companyId => dispatch(fetchCompanyReviews(companyId)),
         postReview: data => dispatch(postReview(data)),
         fetchCompany: companyId => dispatch(fetchCompany(companyId)),
-        openModal: modal => dispatch(openModal(modal)),
+        editUserReview: data => dispatch(editUserReview(data)),
+        removeUserReview: (id) => dispatch(removeUserReview(id)),
+        openModal: (modal) => dispatch(openModal(modal)),
         openModalWithProps: (modal, modalProps) => dispatch(openModalWithProps(modal, modalProps)),
+        closeModal: () => dispatch(closeModal()),
     };
 };
 
-export default connect(mstp, mdtp)(ReviewPage);
+export default connect(mstp, mdtp)(ReviewItemEdit);

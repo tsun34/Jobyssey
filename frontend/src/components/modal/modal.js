@@ -6,6 +6,8 @@ import JobIndexItemContainer from '../job_index/job_index_container'
 import LandingCreateJobContainer from '../landing_page/landing_create_job_container';
 import LandingEditJobContainer from '../landing_page/landing_edit_job_container';
 import '../../css/create_job.css';
+import ReviewItemContainer from '../review/review_item_container';
+import ReviewItemEditContainer from '../review/review_item_edit_container';
 
 class Modal extends React.Component {
     constructor(props) {
@@ -48,6 +50,18 @@ class Modal extends React.Component {
                 modelHeaderText = 'Update an Application';
                 modalHeaderTextClassName = null;
                 width = "70%";
+                break;
+            case 'review_item':
+                modalContent = < ReviewItemContainer currentReview={this.props.modal.modalProps} />;
+                modelHeaderText = 'Review Detail';
+                modalHeaderTextClassName = null;
+                width = "50%";
+                break;
+            case 'edit_review':
+                modalContent = < ReviewItemEditContainer currentReview={this.props.modal.modalProps} />;
+                modelHeaderText = 'Update an Review';
+                modalHeaderTextClassName = null;
+                width = "50%";
                 break;
             default:
                 modalContent = null;
