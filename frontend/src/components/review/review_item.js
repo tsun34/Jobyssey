@@ -29,7 +29,9 @@ class ReviewItem extends React.Component {
                     <div className="review-input">
                         <div className="leave-reivew-input-text-area-div">
                             <div className="leave-reivew-input-text-area">{this.props.currentReview.body}</div>
+                            <span>Posted by You</span>
                         </div>
+                        
                         <div className="review-buttons-wrapper">
                             <button className="review-leave-button" onClick={() => this.onClickEdit(this.props.currentReview)}>Edit Review</button>
                             <button className="review-leave-button" onClick={this.onClick}>Delete Review</button>
@@ -43,6 +45,7 @@ class ReviewItem extends React.Component {
                     <div className="review-input">
                         <div className="leave-reivew-input-text-area-div">
                             <div className="leave-reivew-input-text-area">{this.props.currentReview.body}</div>
+                            <span>Posted by Anonymous</span>
                         </div>
                     </div>
                 </div>

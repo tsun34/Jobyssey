@@ -89,6 +89,12 @@ class ReviewPage extends React.Component {
                   (review, idx) =>
                     <div className="review-row" key={idx} onClick={() => this.onItemClick(review)}>
                       <div>{review.body}</div>
+                      {
+                        (this.props.currentUserId === review.user) ?
+                        <span>Posted by You, Click review to edit.</span> : 
+                        <span>Posted by Anonymous</span> 
+                      }
+
                     </div>
                 )
             }

@@ -55,13 +55,13 @@ class Modal extends React.Component {
                 modalContent = < ReviewItemContainer currentReview={this.props.modal.modalProps} />;
                 modelHeaderText = 'Review Detail';
                 modalHeaderTextClassName = null;
-                width = "70%";
+                width = "50%";
                 break;
             case 'edit_review':
                 modalContent = < ReviewItemEditContainer currentReview={this.props.modal.modalProps} />;
                 modelHeaderText = 'Update an Review';
                 modalHeaderTextClassName = null;
-                width = "70%";
+                width = "50%";
                 break;
             default:
                 modalContent = null;
