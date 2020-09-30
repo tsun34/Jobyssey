@@ -105,7 +105,7 @@ class SignUp extends React.Component {
                     />
                     <button className="sign-button">Sign up</button>
                     <br />
-                    <span>Already have an account? <a onClick={this.switchModal}>Log in</a></span>
+                    <span>Already have an account? <a href="" onClick={this.switchModal}>Log in</a></span>
                     {Object.keys(this.state.errors).length > 0 ? this.renderErrors() : null}
 
                 </form>

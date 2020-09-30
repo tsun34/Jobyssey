@@ -8,3 +8,27 @@
     align-self: center;
     margin-top: 100px;
 }
+
+.custom-viz-input-wrapper{
+    margin-left: 20px;
+}
+
+.custom-viz-input{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.custom-viz-input-col{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.custom-viz-input-col >span{
+    font-size: 18px;
+}
+
+.viz-custom-input{
+    margin: 10px 0;
+}
