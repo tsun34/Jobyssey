@@ -18,12 +18,14 @@
     margin-top: 2rem;
 }
 
+
 .review-company-description {
-    width: 50%;
+    width: 40%;
     margin: auto;
     padding-top: 1rem;
     font-size: 1.5rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .review-company-reviews {

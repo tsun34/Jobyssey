@@ -64,6 +64,7 @@ class ReviewPage extends React.Component {
         <div style={{ backgroundColor: getRandomBackgroundColor() }} className="review-company-name"> 
           <div>{company.name}</div>
         </div>
+        <div className='review-company-description'>{company.description}</div>
         <div className="review-company-reviews">
             <div className="review-input-wrapper">
               {
