@@ -77,7 +77,7 @@ class LandingCreateJob extends React.Component {
     render() {
         const { companyName, position, stage, applicationLink, salary, location, deadline, dateApplied, interviewDate, decisionDate, decision, notes, networkContacts, studyPrep } = this.state;
         return (
-            <form className='job-index'>
+            <form className='job-index' onSubmit={this.onSubmitClick}>
                 {Object.keys(this.state.errors).length > 0 ? this.renderErrors() : null}
 
                 <div className='job-index-top'>
@@ -131,7 +131,7 @@ class LandingCreateJob extends React.Component {
                                 placeholder="Application Link *"
                                 type="text"
                                 value={applicationLink}
-                                
+                                required
                             />
                         </li>
                         <li className='li-details'>
@@ -254,7 +254,7 @@ class LandingCreateJob extends React.Component {
                         </textarea>
                     </li>
                 </ul>
-                <button className="sign-button" type="submit" onClick={this.onSubmitClick}>Create Job</button>
+                <button className="sign-button" type="submit">Create Job</button>
             </form>
 
 
