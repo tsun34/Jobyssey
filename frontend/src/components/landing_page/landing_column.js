@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import '../../css/landing-page.css';
 import LandingCompanyContainer from './landing_company_container';
 import { getRandomBackgroundColor } from '../../util/general_util';
@@ -31,7 +30,6 @@ class LandingColumn extends React.Component {
 
     render() {
         const color = { "Wishlist": "#4285f4", "Applied": "#db4437", "Interview": "#f4b400", "Decision": "#25b871" };
-        const date = { "Wishlist": "application deadline", "Applied": "applied date", "Interview": "upcoming interview", "Decision": "date" };   
         const { title, jobs } = this.props;
         return (
         <div className="landing-column">

@@ -4,9 +4,6 @@ import '../../css/landing-page.css';
 import LandingColumnContainer from './landing_column_container';
 
 class LandingPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.props.closeModal();

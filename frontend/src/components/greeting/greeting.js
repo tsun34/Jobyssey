@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/greeting.css';
-import { GrUserExpert } from 'react-icons/gr';
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 class Greeting extends React.Component {
     constructor(props) {

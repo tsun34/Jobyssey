@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewPage from './review_page';
-import { fetchCompanyReviews, postReview, editUserReview, removeUserReview } from '../../actions/review_actions';
+import { fetchCompanyReviews, postReview } from '../../actions/review_actions';
 import { fetchCompany } from '../../actions/company_action';
 import { openModal, openModalWithProps } from '../../actions/modal_actions';
 

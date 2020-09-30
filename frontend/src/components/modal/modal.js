@@ -10,63 +10,53 @@ import ReviewItemContainer from '../review/review_item_container';
 import ReviewItemEditContainer from '../review/review_item_edit_container';
 
 class Modal extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     render() {
         let { modal } = this.props.modal ?? {};
         if(!modal) {
             return null;
         }
-        let modalContent, modelHeaderText, modalHeaderTextClassName, width;
+        let modalContent, modelHeaderText, width;
         switch (modal) {
             case 'sign_in':
                 modalContent = <SignInContainer />;
                 modelHeaderText = 'Log in';
-                modalHeaderTextClassName = null;
                 width = "500px";
                 break;
             case 'sign_up':
                 modalContent = <SignUpContainer />;
                 modelHeaderText = 'Sign up';
-                modalHeaderTextClassName = null;
                 width = "500px";
                 break;
             case 'job_index_item':
                 modalContent = <JobIndexItemContainer job={this.props.modal.modalProps}/>;
                 modelHeaderText = 'Application Details';
-                modalHeaderTextClassName = null;
                 width = "70%";
                 break;
             case 'create_job':
                 modalContent = < LandingCreateJobContainer />;
                 modelHeaderText = 'Add an Application';
-                modalHeaderTextClassName = "create-job-header-text";
                 width = "70%";
                 break;
             case 'edit_job':
                 modalContent = < LandingEditJobContainer currentJob={this.props.modal.modalProps} />;
                 modelHeaderText = 'Update an Application';
-                modalHeaderTextClassName = null;
                 width = "70%";
                 break;
             case 'review_item':
                 modalContent = < ReviewItemContainer currentReview={this.props.modal.modalProps} />;
                 modelHeaderText = 'Review Detail';
-                modalHeaderTextClassName = null;
                 width = "50%";
                 break;
             case 'edit_review':
                 modalContent = < ReviewItemEditContainer currentReview={this.props.modal.modalProps} />;
                 modelHeaderText = 'Update an Review';
-                modalHeaderTextClassName = null;
                 width = "50%";
                 break;
             default:
                 modalContent = null;
                 modelHeaderText = '';
-                modalHeaderTextClassName = null;
                 break;
         }
         return (

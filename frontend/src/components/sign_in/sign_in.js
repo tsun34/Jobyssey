@@ -82,7 +82,7 @@ class SignIn extends React.Component {
                     <button className="sign-button" type="submit">Log in</button>
                     <button className="sign-button" onClick={this.handleDemo}>Demo Login</button>
                     <br />
-                    <span>Don't have an account? <a href=""  onClick={e => this.onSignupClick(e)}>Sign up</a></span>
+                    <span>Don't have an account? <a onClick={e => this.onSignupClick(e)}>Sign up</a></span>
                     {Object.keys(this.state.errors).length > 0? this.renderErrors() : null}
                 </form>
                 {/* <button onClick={this.handleDemo}>Continue as Demo User</button> */}

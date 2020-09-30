@@ -24,7 +24,7 @@ class ExploreCompanyList extends React.Component {
 
     render() {
         const { redirectUrl } = this.state;
-        if (redirectUrl != null && redirectUrl != '') {
+        if (redirectUrl !== null && redirectUrl !== '') {
             return <Redirect to={redirectUrl}/>;
         }
         const companies = this.props.companies ?? [];

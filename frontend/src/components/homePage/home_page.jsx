@@ -10,7 +10,6 @@ import homeImg6 from "../../pics/6.png";
 
 import '../../css/homepage.css'
 
-import profilepic from '../../pics/profilepic.png'
 
 class HomePage extends React.Component {
     constructor(props) {
