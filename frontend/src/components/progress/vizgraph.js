@@ -208,103 +208,108 @@ class VizSanChart extends React.Component {
                     {
                         this.state.openCustomInput ? 
                         <form className='custom-viz-input'>
-                            <div className='custom-viz-input-col'>
-                                <span>How many positions did you apply via ...</span>
-                                {/* <input className="viz-custom-input" onChange={this.onChangeUpdate('totalApp')} type='number' value={this.state.totalApp} required></input> */}
-                                <label className="viz-custom-input">Company Websites: 
-                                    <input onChange={this.onChangeUpdate('companyWebsite')} type='number' value={this.state.companyWebsite} required></input>
-                                </label>
-                                <label className="viz-custom-input">Linkedin: 
-                                    <input onChange={this.onChangeUpdate('linkedin')} type='number' value={this.state.linkedin} required></input>
-                                </label>
-                                <label className="viz-custom-input">Glassdoor: 
-                                    <input onChange={this.onChangeUpdate('glassdoor')} type='number' value={this.state.glassdoor} required></input>
-                                </label>
-                                <label className="viz-custom-input">Indeed: 
-                                    <input onChange={this.onChangeUpdate('indeed')} type='number' value={this.state.indeed} required></input>
-                                </label>
-                                <label className="viz-custom-input">ZipRecruiter: 
-                                    <input onChange={this.onChangeUpdate('zipRecruiter')} type='number' value={this.state.zipRecruiter} required></input>
-                                </label>
-                                <label className="viz-custom-input">Handshake: 
-                                    <input onChange={this.onChangeUpdate('handshake')} type='number' value={this.state.handshake} required></input>
-                                </label>
-                                <label className="viz-custom-input">otherPlatforms: 
-                                    <input onChange={this.onChangeUpdate('otherPlatforms')} type='number' value={this.state.otherPlatforms} required></input>
-                                </label>
-                                <label className="viz-custom-input">Referrals: 
-                                    <input onChange={this.onChangeUpdate('referral')} type='number' value={this.state.referral} required></input>
-                                </label>
+                            <div className="custom-viz-input-top">
 
-                            </div>
-                            <div className='custom-viz-input-col'>
-                                <span>How many interviews did you receive via ...</span>
-                                <label className="viz-custom-input">Company Websites: 
-                                    <input onChange={this.onChangeUpdate('companyWebsiteInterview')} type='number' value={this.state.companyWebsiteInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">Linkedin: 
-                                    <input onChange={this.onChangeUpdate('linkedinInterview')} type='number' value={this.state.linkedinInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">Glassdoor: 
-                                    <input onChange={this.onChangeUpdate('glassdoorInterview')} type='number' value={this.state.glassdoorInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">Indeed: 
-                                    <input onChange={this.onChangeUpdate('indeedInterview')} type='number' value={this.state.indeedInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">ZipRecruiter: 
-                                    <input onChange={this.onChangeUpdate('zipRecruiterInterview')} type='number' value={this.state.zipRecruiterInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">Handshake:
-                                    <input onChange={this.onChangeUpdate('handshakeInterview')} type='number' value={this.state.handshakeInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">otherPlatforms:
-                                    <input onChange={this.onChangeUpdate('otherPlatformsInterview')} type='number' value={this.state.otherPlatformsInterview} required></input>
-                                </label>
-                                <label className="viz-custom-input">Referrals:
-                                    <input onChange={this.onChangeUpdate('referralInterview')} type='number' value={this.state.referralInterview} required></input>
-                                </label>
-                            </div>
-                            <div className='custom-viz-input-col'>
-                                <span>How many rejections did you receive via ...</span>
-                                <label className="viz-custom-input">Company Websites: 
-                                    <input onChange={this.onChangeUpdate('companyWebsiteReject')} type='number' value={this.state.companyWebsiteReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">Linkedin:
-                                    <input onChange={this.onChangeUpdate('linkedinReject')} type='number' value={this.state.linkedinReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">Glassdoor: 
-                                    <input onChange={this.onChangeUpdate('glassdoorReject')} type='number' value={this.state.glassdoorReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">Indeed: 
-                                    <input onChange={this.onChangeUpdate('indeedReject')} type='number' value={this.state.indeedReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">ZipRecruiter: 
-                                    <input onChange={this.onChangeUpdate('zipRecruiterReject')} type='number' value={this.state.zipRecruiterReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">Handshake:
-                                    <input onChange={this.onChangeUpdate('handshakeReject')} type='number' value={this.state.handshakeReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">otherPlatforms:
-                                    <input onChange={this.onChangeUpdate('otherPlatformsReject')} type='number' value={this.state.otherPlatformsReject} required></input>
-                                </label>
-                                <label className="viz-custom-input">Referrals:
-                                    <input onChange={this.onChangeUpdate('referralReject')} type='number' value={this.state.referralReject} required></input>
-                                </label>    
-                            </div>
-                            <div className='custom-viz-input-col'>
-                                <span>How many offers did you receive in total?</span>
-                                <input onChange={this.onChangeUpdate('totalOffer')} type='number' value={this.state.totalOffer} required></input>
-                                {/* <input className="viz-custom-input" onChange={this.onChangeUpdate('companyWebsiteOffer')} type='number' value={this.state.companyWebsiteOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('linkedinOffer')} type='number' value={this.state.linkedinOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('glassdoorOffer')} type='number' value={this.state.glassdoorOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('indeedOffer')} type='number' value={this.state.indeedOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('zipRecruiterOffer')} type='number' value={this.state.zipRecruiterOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('handshakeOffer')} type='number' value={this.state.handshakeOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('otherPlatformsOffer')} type='number' value={this.state.otherPlatformsOffer} required></input>
-                                <input className="viz-custom-input" onChange={this.onChangeUpdate('referralOffer')} type='number' value={this.state.referralOffer} required></input> */}
+                                <div className='custom-viz-input-col'>
+                                    <span>How many positions did you apply via ...</span>
+                                    {/* <input className="viz-custom-input" onChange={this.onChangeUpdate('totalApp')} type='number' value={this.state.totalApp} required></input> */}
+                                    <label className="viz-custom-input">Company Websites: 
+                                        <input onChange={this.onChangeUpdate('companyWebsite')} type='number' value={this.state.companyWebsite} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Linkedin: 
+                                        <input onChange={this.onChangeUpdate('linkedin')} type='number' value={this.state.linkedin} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Glassdoor: 
+                                        <input onChange={this.onChangeUpdate('glassdoor')} type='number' value={this.state.glassdoor} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Indeed: 
+                                        <input onChange={this.onChangeUpdate('indeed')} type='number' value={this.state.indeed} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">ZipRecruiter: 
+                                        <input onChange={this.onChangeUpdate('zipRecruiter')} type='number' value={this.state.zipRecruiter} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Handshake: 
+                                        <input onChange={this.onChangeUpdate('handshake')} type='number' value={this.state.handshake} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">otherPlatforms: 
+                                        <input onChange={this.onChangeUpdate('otherPlatforms')} type='number' value={this.state.otherPlatforms} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Referrals: 
+                                        <input onChange={this.onChangeUpdate('referral')} type='number' value={this.state.referral} required></input>
+                                    </label>
 
-                                <button className="viz-create-button" onClick={this.onSubmitCustom}>Submit</button>
-                                <div className="viz-cancel-button" onClick={this.onCancelCustom}>Cancel</div>
+                                </div>
+                                <div className='custom-viz-input-col'>
+                                    <span>How many interviews did you receive via ...</span>
+                                    <label className="viz-custom-input">Company Websites: 
+                                        <input onChange={this.onChangeUpdate('companyWebsiteInterview')} type='number' value={this.state.companyWebsiteInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Linkedin: 
+                                        <input onChange={this.onChangeUpdate('linkedinInterview')} type='number' value={this.state.linkedinInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Glassdoor: 
+                                        <input onChange={this.onChangeUpdate('glassdoorInterview')} type='number' value={this.state.glassdoorInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Indeed: 
+                                        <input onChange={this.onChangeUpdate('indeedInterview')} type='number' value={this.state.indeedInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">ZipRecruiter: 
+                                        <input onChange={this.onChangeUpdate('zipRecruiterInterview')} type='number' value={this.state.zipRecruiterInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Handshake:
+                                        <input onChange={this.onChangeUpdate('handshakeInterview')} type='number' value={this.state.handshakeInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">otherPlatforms:
+                                        <input onChange={this.onChangeUpdate('otherPlatformsInterview')} type='number' value={this.state.otherPlatformsInterview} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Referrals:
+                                        <input onChange={this.onChangeUpdate('referralInterview')} type='number' value={this.state.referralInterview} required></input>
+                                    </label>
+                                </div>
+                                <div className='custom-viz-input-col'>
+                                    <span>How many rejections did you receive via ...</span>
+                                    <label className="viz-custom-input">Company Websites: 
+                                        <input onChange={this.onChangeUpdate('companyWebsiteReject')} type='number' value={this.state.companyWebsiteReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Linkedin:
+                                        <input onChange={this.onChangeUpdate('linkedinReject')} type='number' value={this.state.linkedinReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Glassdoor: 
+                                        <input onChange={this.onChangeUpdate('glassdoorReject')} type='number' value={this.state.glassdoorReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Indeed: 
+                                        <input onChange={this.onChangeUpdate('indeedReject')} type='number' value={this.state.indeedReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">ZipRecruiter: 
+                                        <input onChange={this.onChangeUpdate('zipRecruiterReject')} type='number' value={this.state.zipRecruiterReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Handshake:
+                                        <input onChange={this.onChangeUpdate('handshakeReject')} type='number' value={this.state.handshakeReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">otherPlatforms:
+                                        <input onChange={this.onChangeUpdate('otherPlatformsReject')} type='number' value={this.state.otherPlatformsReject} required></input>
+                                    </label>
+                                    <label className="viz-custom-input">Referrals:
+                                        <input onChange={this.onChangeUpdate('referralReject')} type='number' value={this.state.referralReject} required></input>
+                                    </label>    
+                                </div>
+                            </div>
+                            <div className="custom-viz-input-bottom">
+                                <div className='custom-viz-input-col'>
+                                    <span>How many offers did you receive in total?</span>
+                                    <input onChange={this.onChangeUpdate('totalOffer')} type='number' value={this.state.totalOffer} required></input>
+                                    {/* <input className="viz-custom-input" onChange={this.onChangeUpdate('companyWebsiteOffer')} type='number' value={this.state.companyWebsiteOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('linkedinOffer')} type='number' value={this.state.linkedinOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('glassdoorOffer')} type='number' value={this.state.glassdoorOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('indeedOffer')} type='number' value={this.state.indeedOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('zipRecruiterOffer')} type='number' value={this.state.zipRecruiterOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('handshakeOffer')} type='number' value={this.state.handshakeOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('otherPlatformsOffer')} type='number' value={this.state.otherPlatformsOffer} required></input>
+                                    <input className="viz-custom-input" onChange={this.onChangeUpdate('referralOffer')} type='number' value={this.state.referralOffer} required></input> */}
+                                    <button className="viz-create-button" onClick={this.onSubmitCustom}>Submit</button>
+                                    <button className="viz-create-button" onClick={this.onCancelCustom}>Cancel</button>
+                                </div>
+
                             </div>
                         </form> 
                         : 

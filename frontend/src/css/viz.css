@@ -1,4 +1,5 @@
 .viz-container{
+    height: calc(100vh - 106px);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -6,7 +7,8 @@
 
 .viz-graph{
     align-self: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    margin: 0 30px;
 }
 
 .custom-viz-input-wrapper{
@@ -15,10 +17,24 @@
 
 .custom-viz-input{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    margin: 0 30px;
+}
+
+.custom-viz-input-top{
+    display: flex;
+}
+
+.custom-viz-input-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .custom-viz-input-col{
+    /* width: 180px; */
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
@@ -31,4 +47,23 @@
 
 .viz-custom-input{
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
+
+.viz-custom-input input{
+    width: 30px;
+}
+
+.viz-create-button{
+    border-radius: 4px;
+    background-color:#2d2d5b;
+    color: white;
+    border: 6px;
+    padding: 10px 12px;
+    margin: 10px 20px 0 20px; 
+    border: none;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
